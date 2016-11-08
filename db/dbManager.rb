@@ -80,3 +80,41 @@ end
 def getOpponents(season, team, stats)
   puts "Opponent Stats"
 end
+
+#############################################################
+# Get all matches in tournament:
+def getTournamentMatches(tournament)
+end
+
+# Get an individual match (return entire table)
+def getMatch(tournament, week, team1, team2)
+end
+
+# Get player totals for that team,tournament
+def getTeam(tournament, team)
+end
+
+# Get Team Total (Sum getTeam())
+def getTeamTotal(tournament, team)
+end
+
+# Get Team Average (Get Team Total/Team Size)
+def getTeamAverage(data)
+end
+
+# Tournament Leaderboard:
+def getLeaders(tournament, stat)
+end
+
+# Get Total Stats over single tournament
+def getPlayer(tournament, player)
+end
+
+# Get Career Stats
+def getPlayerTotal(player)
+end
+
+# Given a category and data, return the
+# corresponding columns of data
+def getStatCategory(data, category)
+end
