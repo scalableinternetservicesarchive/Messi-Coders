@@ -33,7 +33,10 @@ def import(csvfile)
     game[1..game.size].each do |row|
         rowstr = "INSERT INTO [" + filename + "] values(NULL,"
 
-        row.each { |item| item.insert(0, "\"") << "\"" }
+        row.each { |item| 
+            puts item
+            item.insert(0, "\"") << "\"" 
+        }
 
         rowstr += row.join(",")
         rowstr += ")"
@@ -51,7 +54,7 @@ begin
     db = SQLite3::Database.open "development.sqlite3"
 
     #csv_list = Dir.glob("csv/*")
-    csv_list = ['csv/MessiCoders-PlayerData - Sheet1.csv']
+    csv_list = ["csv/PlayerData.csv"]
 
     #Create table of csv
     tablecreation = "CREATE TABLE IF NOT EXISTS CSV(Id INTEGER PRIMARY KEY, 
