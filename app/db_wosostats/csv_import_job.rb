@@ -33,10 +33,7 @@ def import(csvfile)
     game[1..game.size].each do |row|
         rowstr = "INSERT INTO [" + filename + "] values(NULL,"
 
-        #Single quote all the TEXT values
-        strings_idx.each do |idx|
-            row[idx] = "'" + row[idx] + "'"
-        end
+        row.each { |item| item.insert(0, "\"") << "\"" }
 
         rowstr += row.join(",")
         rowstr += ")"
@@ -71,10 +68,11 @@ begin
         #Execute commands 
         commands = import(csv_filename)
 
-        puts commands[0]
         commands.each do |command|
+            puts command
             db.execute command
         end
+        puts csv_list
     end
     
 rescue SQLite3::Exception => e 
