@@ -6,12 +6,6 @@
  * @license      GNU General Public License version 2 or later, see http://www.gnu.org/licenses/gpl-2.0.html
  * @author       Vadim Kozhukhov (support@torbara.com)
  */
- /*global jQuery*/
- /*global UIkit*/
- /*global colWidth1*/
- /*global colWidth*/
- /*global $grid*/
- /*global $grid1*/
 jQuery(function($) {
 
     var config = $('html').data('config') || {};
