@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body class="tm-isblog tt-players-page" style="overflow-x: hidden">
+    <div class="over-wrap">
+        <div class="tm-top-a-box tm-full-width tm-box-bg-1 ">
+            <div class="uk-container uk-container-center">
+                <section id="tm-top-a" class="tm-top-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
+
+                    <div class="uk-width-1-1 uk-row-first">
+                        <div class="uk-panel">
+                            <!---TO-DO: Potentially change this background-image---> 
+                            <div class="uk-cover-background uk-position-relative head-wrap" style="height: 290px; background-image: url('../../images/head-bg.jpg');">
+                                <img class="uk-invisible" src="../../images/head-bg.jpg" alt="" height="290" width="1920">
+                                <div class="uk-position-cover uk-flex uk-flex-center head-title">
+                                    <h1 ><b class="myPlayerName">Christen Press</b></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="uk-container uk-container-center alt">
+            <ul class="uk-breadcrumb">
+                <li><a href="index.html">NWSL</a>
+                </li>
+                <li><a href="players.html">Chicago Red Stars</a> <!--- TO-DO: Potentially make this dynamic- if CRS-> Chicago Red Stars--->
+                </li>
+                <li  class="uk-active"><span class="myPlayerName">Christen Press</span>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="uk-container uk-container-center">
+            <div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match="" data-uk-grid-margin="">
+                <div class="tm-main uk-width-medium-1-1 uk-row-first">
+                    <main id="tm-content" class="tm-content">
+                        <div id="system-message-container"></div>
+                        <div class="contentpaneopen">
+                            <article class="player-single tt-players-page">
+                                <div class="uk-container uk-container-center alt">
+                                    <div class="uk-gfid">
+                                    </div>
+                                </div>
+                                <div class="player-top">
+                                    <div class="uk-container uk-container-center alt">
+                                        <div class="uk-grid">
+                                            <div class="uk-width-2-10">
+                                                <div class="avatar">
+                                                    <img style= "width:100%" src="http://chicagoredstars.com/assets/2016/01/Untitled-1_0005_ChicagoRedStarsHeadShots-98.jpg">                    
+                                                </div>
+                                            </div>
+                                            <div class="uk-width-1-12">
+                                                <!--- Have to trace back these classes in html to change them--->
+                                                <div class="number">
+                                                    23                    
+                                                </div>
+                                            </div>
+                                            <div class="uk-width-6-12">
+                                                <div class="name">
+                                                    <h2>
+                                                        <span class="myPlayerName">Christen Press</span>                     
+                                                    </h2>
+                                                </div>
+                                                <div class="wrap">
+                                                    <ul class="info">
+                                                        <li><span>CLUB(S)</span><span>CHICAGO RED STARS, USWNT</span></li>
+                                                        <li><span>POSITION</span><span>FORWARD</span></li>
+                                                        <li><span>BIRTHDATE</span><span>12/09/1988</span></li>
+                                                        <li><span>HOMETOWN</span><span>PALOS VERDES, CA</span></li>
+                                                        <li><span>HEIGHT</span><span>5 ft 7 in</span></li>
+                                                    </ul>
+                                                    <ul class="socials">
+                                                        <li class="twitter">
+                                                            <a href="http://twitter.com/christenpress" target="_blank" rel="nofollow">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-container uk-container-center alt">
+                                    <div class="uk-grid">
+                                        <div class="uk-width-1-1">
+                                            <div class="line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-container uk-container-center alt">
+                                    <div class="uk-grid">
+                                        <div class="uk-width-9-10 uk-push-1-10">
+                                            <div class="player-total-info">
+                                                <!--- Graphs/Stats Charts will be Placed Here--->
+                                                <p><strong>Shooting Statistics</p>
+                                                <p><strong>Passing Statistics</p>
+                                                <p><strong>Possession Statistics</p>
+                                                <p><strong>Player Defending Statistics</p>
+                                                <p><strong>Ball Defending Statistics</p>
+                                                <p><strong>Additional Statistics</p>
+                                                <!-- List Items Have ul>
+                                                    <li>List Item?</li>
+                                                </ul--->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+    </div>
+    
+    <script language="javascript">
+        function fillElement(elementName, newText) {
+            var elements  = document.getElementsByClassName(elementName);
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].innerHTML = newText;
+            }
+        }
+        
+        window.onload = function(e){ 
+            fillElement("myPlayerName", "Make this page dynamic");
+        }
+    </script>
+
+</body>
+
+</html>
