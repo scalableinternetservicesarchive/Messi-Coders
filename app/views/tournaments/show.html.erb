@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+</head>
+<body class="tm-isblog" onload="loadMatches()" style="overflow-x: hidden">
+
+        <div class="tm-top-a-box tm-full-width tm-box-bg-1 " style="padding-bottom:10px">
+            <div class="uk-container uk-container-center">
+                <section id="tm-top-a" class="tm-top-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
+                    <div class="uk-width-1-1 uk-row-first">
+                        <div class="uk-panel">
+                            <div class="uk-cover-background uk-position-relative head-match-wrap" style="height: 590px; background-image: url('../../images/head-bg-match.jpg');">
+<!--                                <img class="uk-invisible" src="../../images/head-bg-match.jpg" alt="">-->
+                                <div class="uk-position-cover uk-flex-center head-news-title">
+                                    <h1>
+                                        <b class="myTournament">2015 NWSL Need to make this page dynamic for each tournament</b>
+                                    </h1>
+                                    <div class="clear"></div>
+                                    
+                                    <!--- Countdown; this can be useful for some tournaments, and match stats, but NOT finished tournaments---> 
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="uk-container uk-container-center alt" >
+            <ul class="uk-breadcrumb">
+                <li><a href="/index.html">Tournament</a></li>
+                <li class="myTournament"><span>2015 NWSL</span></li>
+            </ul>
+        </div>
+  
+        <div class="uk-container uk-container-center" style="padding-bottom:80px;">
+            <div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match="" data-uk-grid-margin="">
+                <div class="tm-main uk-width-large-1-1">
+                    <main id="tm-content" class="tm-content">
+                        <div class="match-list-wrap" id="target">
+                        </div>
+                    </main>
+                </div>
+
+            </div>
+        </div>
+    <script>
+    function loadMatches() {
+            var data =  [
+        {
+            "WeekNum":"20",
+            "team1Logo":"ny-flash-logo.png",
+            "team1":"Western New York Flash",
+            "team1Score":"3",
+            "team2Score":"2",
+            "team2":"Portland Thorns",
+            "team2Logo":"por-thorns-logo.png",
+            "location":"Portland",
+        },
+                {
+            "WeekNum":"20",
+            "team1Logo":"ny-flash-logo.png",
+            "team1":"Western New York Flash",
+            "team1Score":"3",
+            "team2Score":"2",
+            "team2":"Portland Thorns",
+            "team2Logo":"por-thorns-logo.png",
+            "location":"Portland",
+        }
+                ];
+
+    var template = [
+        '<div class="match-list-item" id="target">',
+        '<div class="date">',
+        '<span>Week</span>',
+        '{{WeekNum}}',
+    '</div>',
+    '<div class="logo">',
+        '<a href="results.html">',
+        '<img src="../../images/MessiCodersPics/{{team1Logo}}"></a>',                    
+   '</div>',
+    '<div class="team-name">',
+        '{{team1}}',               
+    '</div>',
+    '<div class="team-score">',
+        '{{team1Score}}',
+    '</div>',
+    '<div class="score-separator">:</div>',
+    '<div class="team-score">',
+        '{{team2Score}}',
+    '</div>',
+    '<div class="team-name">',
+        '{{team2}}',
+    '</div>',
+    '<div class="logo">',
+        '<a href="results.html">',
+        '<img src="../../images/MessiCodersPics/{{team2Logo}}"></a>',                  
+    '</div>',
+    '<div class="location">',
+        '<address>',
+            '{{location}}               <br><br>',
+        '</address>',
+    '</div>',
+    '<div class="va-view-wrap">',
+        '<a class="view-article" href="results.html">view</a>',
+    '</div>',
+'</div>',
+        '</div>'
+    ].join("\n");
+
+        var html = "";
+        var i = 0;
+        for (; i<data.length; i++){
+            html += Mustache.render(template, data[i]);
+        }
+    
+    document.getElementById("target").innerHTML = html;
+    }
+</script>
+
+
+
+</body>
+
+</html>

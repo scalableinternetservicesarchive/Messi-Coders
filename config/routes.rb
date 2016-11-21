@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get '/about' => 'general#about'
   get '/contact' => 'general#contact'
   get '/news/show' => 'news#show'
+  get 'tournaments/show' =>'tournaments#show'
+  get 'clubs/show' => 'clubs#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
