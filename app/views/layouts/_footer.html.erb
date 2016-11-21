@@ -81,11 +81,11 @@
                                 <div class="footer-wrap">
                                     <div class="foot-menu-wrap">
                                         <ul class="nav menu">
-                                            <li class="item-165"><a href="../General/about.html">About</a>
+                                            <li class="item-165"><%= link_to 'About', about_path %>
                                             </li>
-                                            <li class="item-166"><a href="../News/news.html">News</a>
+                                            <li class="item-166"><a href="../news/show">News</a>
                                             </li>
-                                            <li class="item-167"><a href="../General/contact.html">Contact</a>
+                                            <li class="item-167"><%= link_to 'Contact', contact_path %>
                                             </li>
                                         </ul>
                                     </div>
@@ -142,9 +142,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="../News/news.html">News</a>
+                    <li><a href="../news/show">News</a>
                     </li>
-                    <li><a href="../General/about.html">About</a>
+                    <li><%= link_to 'About', about_path %>
+                    </li>
+                    <li><%= link_to 'Contact', contact_path %>
                     </li>
                 </ul>
             </div>
