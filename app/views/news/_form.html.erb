@@ -1,7 +1,7 @@
 <%= form_for :news, url: news_index_path do |f| %>
-        <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Date</p>
+        <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Link to Story</p>
             <p style= "margin-top: 1px">
-                <%= f.date_field :date, size: "70x10" %>
+                <%= f.text_field :newslink, size: "70x10" %>
             </p>
         <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Title</p>
             <p style= "margin-top: 1px">
