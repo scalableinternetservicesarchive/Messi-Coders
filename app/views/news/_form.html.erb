@@ -1,0 +1,21 @@
+<%= form_for :news, url: news_index_path do |f| %>
+        <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Date</p>
+            <p style= "margin-top: 1px">
+                <%= f.date_field :Date, size: "70x10" %>
+            </p>
+        <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Title</p>
+            <p style= "margin-top: 1px">
+                <%= f.text_field :Title, size: "70x10" %>
+            </p>
+        <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Subtext</p>
+            <p style= "margin-top: 1px">
+                <%= f.text_area :Subtext, size: "71x10" %>
+            </p>
+        <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Display Image (URL)</p>
+            <p style= "margin-top: 1px">
+                <%= f.text_field :Image, size: "70x10" %>
+            </p>
+        <p>
+            <%= f.submit %>
+          </p>
+<% end %>
