@@ -49,28 +49,8 @@
                                         <div class="top-title">
                                             <h2><span style="color:#00aced">Add</span> Article</h2>
                                         </div>
-                                        <%= form_for :news, url: news_index_path do |f| %>
-                                            <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Date</p>
-                                                <p style= "margin-top: 1px">
-                                                    <%= f.date_field :date, size: "70x10" %>
-                                                </p>
-                                            <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Title</p>
-                                                <p style= "margin-top: 1px">
-                                                    <%= f.text_field :title, size: "70x10" %>
-                                                </p>
-                                            <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Subtext</p>
-                                                <p style= "margin-top: 1px">
-                                                    <%= f.text_area :subtext, size: "71x10" %>
-                                                </p>
-                                            <p class="sub-title" style="margin-top: 5px; margin-bottom: 0px;">Display Image (URL)</p>
-                                                <p style= "margin-top: 1px">
-                                                    <%= f.text_field :imglink, size: "70x10" %>
-                                                </p>
-                                            <p>
-                                                <%= f.submit %>
-                                              </p>
-                                    <% end %>
-                                    </div>
+                                        <%= render "news/form" %>
+                                        </div>
                                     <div class="uk-width-large-5-10 uk-width-small-1-1">
                                         <div class="top-banner uk-cover-background uk-position-relative" style="height: 420px; background-image: url('../../images/about-team-banner.jpg');">
                                             <img class="uk-invisible" src="../../images/about-team-banner.jpg" alt="">
