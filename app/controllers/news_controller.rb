@@ -1,4 +1,6 @@
 class NewsController < ApplicationController
+    http_basic_authenticate_with name: "Futbolista", password: "messicoder", except: [:index, :show]
+    
     def index
         @news = News.all
     end
