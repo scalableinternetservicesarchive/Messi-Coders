@@ -48,6 +48,9 @@
                                             <h2><span style="color:#00aced">Edit </span> Snippet</h2>
                                         </div>
                                         <%= render "news/form" %>
+                                        <%= button_to 'Delete Article', news_path(@news),
+                                              method: :delete,
+                                              data: { confirm: 'Are you sure?' } %>
                                         </div>
                                     <div class="uk-width-large-5-10 uk-width-small-1-1">
                                         <div class="top-banner uk-cover-background uk-position-relative" style="height: 420px; background-image: url('../../images/about-team-banner.jpg');">
