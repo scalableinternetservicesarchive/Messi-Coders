@@ -35,7 +35,13 @@
             </ul>
         </div>
 
+        
         <div class="uk-container uk-container-center">
+            
+            <div style="padding-bottom: 40px">
+            <%= button_to '+ New Article', new_news_path, :class=> "SubmitButton", :method => :get %>
+            </div>
+            
             <div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match="" data-uk-grid-margin="">
                 <div class="tm-main uk-width-large">
                    
@@ -46,7 +52,7 @@
                                     <div class="uk-width-large-1-3 uk-width-medium-2-4 uk-width-small-2-4 list-article uk-flex uk-flex-column">
                                         <div class="wrapper">
                                             <div class="img-wrap uk-flex-wrap-top">
-                                                <a href=<%= news.newslink %>>
+                                                <a target="_blank" href=<%= news.newslink %>>
                                                 <img src=<%= news.imglink %> alt="">
                                                 </a>        
                                             </div>
@@ -56,7 +62,7 @@
                                                 </div>
                                                 <div class="name">
                                                     <h4>
-                                                        <a href=<%= news.newslink %>>
+                                                        <a target="_blank" href=<%= news.newslink %>>
                                                         <%= news.title %>                    </a>        
                                                     </h4>
                                                 </div>
@@ -66,160 +72,11 @@
                                             </div>
                                         </div>
                                         <div class="article-actions uk-flex-wrap-bottom">
-                                            <div class="count"><i class="uk-icon-comments"></i><span><%= link_to 'Edit', edit_news_path(news) %></span></div>
-                                            <div class="read-more"><a href=<%= news.newslink %>>Read More</a></div>
+                                            <div class="count"><span><%= link_to 'Edit', edit_news_path(news), {:style=>'color:#00afd8;', :class => "css_class"} %></span></div>
+                                            <div class="read-more"><a target="_blank" href=<%= news.newslink %>>Read More</a></div>
                                         </div>
                                     </div>
                                 <% end %>
-                                <div class="uk-width-large-1-3 uk-width-medium-2-4 uk-width-small-2-4 list-article uk-flex uk-flex-column">
-                                    <div class="wrapper">
-                                        <div class="img-wrap uk-flex-wrap-top">
-                                            <a href="news-single.html">
-                                            <img src="../../images/news/4e9ed1f24d1f63b923e67456774158a3.jpg" class="img-polaroid" alt="">
-                                            </a>        
-                                        </div>
-                                        <div class="info uk-flex-wrap-middle">
-                                            <div class="date">
-                                                November 20, 2015            
-                                            </div>
-                                            <div class="name">
-                                                <h4>
-                                                    <a href="news-single.html">
-                                                    Suspendisse purus enim, dictum sed lorem ac, sodales maximus est                    </a>        
-                                                </h4>
-                                            </div>
-                                            <div class="text">
-                                                <p>Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit nibh, sit amet efficitur libero lorem quis mauris. Nunc a pulvinar lectus.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="article-actions uk-flex-wrap-bottom">
-                                        <div class="count"><i class="uk-icon-comments"></i><span>3</span></div>
-                                        <div class="read-more"><a href="news-single.html">Read More</a></div>
-                                    </div>
-                                </div>
-                                <div class="uk-width-large-1-3 uk-width-medium-2-4 uk-width-small-2-4 list-article uk-flex uk-flex-column">
-                                    <div class="wrapper">
-                                        <div class="img-wrap uk-flex-wrap-top">
-                                            <a href="news-single.html">
-                                            <img src="../../images/news/19896c58825d0206bd858f7e50bf51b2.jpg" class="img-polaroid" alt="">
-                                            </a>        
-                                        </div>
-                                        <div class="info uk-flex-wrap-middle">
-                                            <div class="date">
-                                                November 20, 2015            
-                                            </div>
-                                            <div class="name">
-                                                <h4>
-                                                    <a href="news-single.html">
-                                                    Cum sociis natoque penatibus et magnis dis parturient                    </a>       
-                                                </h4>
-                                            </div>
-                                            <div class="text">
-                                                <p>Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit nibh, sit amet efficitur libero lorem quis mauris. Nunc a pulvinar lectus.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="article-actions uk-flex-wrap-bottom">
-                                        <div class="count"><i class="uk-icon-comments"></i><span>2</span></div>
-                                        <div class="read-more"><a href="news-single.html">Read More</a></div>
-                                    </div>
-                                </div>
-                                <div class="uk-width-large-1-3 uk-width-medium-2-4 uk-width-small-2-4 list-article uk-flex uk-flex-column">
-                                    <div class="wrapper">
-                                        <div class="img-wrap uk-flex-wrap-top">
-                                            <a href="news-single.html">
-                                            <img src="../../images/news/0a213d8fc9b9586f374154e6b55e0d7d.jpg" class="img-polaroid" alt="">
-                                            </a>        
-                                        </div>
-                                        <div class="info uk-flex-wrap-middle">
-                                            <div class="date">
-                                                November 20, 2015            
-                                            </div>
-                                            <div class="name">
-                                                <h4>
-                                                    <a href="news-single.html">
-                                                    Vestibulum ante ipsum primis in                    </a>     
-                                                </h4>
-                                            </div>
-                                            <div class="text">
-                                                <p>Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit nibh, sit amet efficitur libero lorem quis mauris. Nunc a pulvinar lectus.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="article-actions uk-flex-wrap-bottom">
-                                        <div class="count"><i class="uk-icon-comments"></i><span>3</span></div>
-                                        <div class="read-more"><a href="news-single.html">Read More</a></div>
-                                    </div>
-                                </div>
-                                <div class="uk-width-large-1-3 uk-width-medium-2-4 uk-width-small-2-4 list-article uk-flex uk-flex-column">
-                                    <div class="wrapper">
-                                        <div class="img-wrap uk-flex-wrap-top">
-                                            <a href="news-single.html">
-                                            <img src="../../images/news/853d071dfa2f869fbd2a70dbcb3a8f5e.jpg" class="img-polaroid" alt="">
-                                            </a>        
-                                        </div>
-                                        <div class="info uk-flex-wrap-middle">
-                                            <div class="date">
-                                                November 20, 2015            
-                                            </div>
-                                            <div class="name">
-                                                <h4>
-                                                    <a href="news-single.html">
-                                                    Nullam enim ante, volutpat non viverra eget                    </a>     
-                                                </h4>
-                                            </div>
-                                            <div class="text">
-                                                <p>Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit nibh, sit amet efficitur libero lorem quis mauris. Nunc a pulvinar lectus.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="article-actions uk-flex-wrap-bottom">
-                                        <div class="count"><i class="uk-icon-comments"></i><span>3</span></div>
-                                        <div class="read-more"><a href="news-single.html">Read More</a></div>
-                                    </div>
-                                </div>
-                                <div class="uk-width-large-1-3 uk-width-medium-2-4 uk-width-small-2-4 list-article uk-flex uk-flex-column">
-                                    <div class="wrapper">
-                                        <div class="img-wrap uk-flex-wrap-top">
-                                            <a href="news-single.html">
-                                            <img src="../../images/news/7f2425d96a8122cb1ac403d0604c257e.jpg" class="img-polaroid" alt="">
-                                            </a>        
-                                        </div>
-                                        <div class="info uk-flex-wrap-middle">
-                                            <div class="date">
-                                                November 20, 2015            
-                                            </div>
-                                            <div class="name">
-                                                <h4>
-                                                    <a href="news-single.html">
-                                                    Interdum et malesuada fames ac ante ipsum primis in faucibus                    </a>        
-                                                </h4>
-                                            </div>
-                                            <div class="text">
-                                                <p>Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit nibh, sit amet efficitur libero lorem quis mauris. Nunc a pulvinar lectus.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="article-actions uk-flex-wrap-bottom">
-                                        <div class="count"><i class="uk-icon-comments"></i><span>2</span></div>
-                                        <div class="read-more"><a href="news-single.html">Read More</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <form method="post">
-                                <div class="pagination">
-                                    <ul class="pagination-list">
-                                        <li class="pagination-start"><span class="pagenav">Start</span></li>
-                                        <li class="pagination-prev"><span class="pagenav">Prev</span></li>
-                                        <li><span class="pagenav">1</span></li>
-                                        <li><a href="#" class="pagenav">2</a></li>
-                                        <li class="pagination-next"><a data-original-title="Next" title="" href="#" class="hasTooltip pagenav">Next</a></li>
-                                        <li class="pagination-end"><a data-original-title="End" title="" href="#" class="hasTooltip pagenav">End</a></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix"></div>
-                            </form>
                         </main>
                     </div>
                 </div>

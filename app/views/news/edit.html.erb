@@ -48,7 +48,7 @@
                                             <h2><span style="color:#00aced">Edit </span> Snippet</h2>
                                         </div>
                                         <%= render "news/form" %>
-                                        <%= button_to 'Delete Article', news_path(@news),
+                                        <%= button_to 'Delete Article', news_path(@news), :class=> "SubmitButton",
                                               method: :delete,
                                               data: { confirm: 'Are you sure?' } %>
                                         </div>
