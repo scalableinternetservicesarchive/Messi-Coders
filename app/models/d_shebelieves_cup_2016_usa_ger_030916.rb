@@ -1,0 +1,2 @@
+class DShebelievesCup2016UsaGer030916 < ApplicationRecord
+end

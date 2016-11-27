@@ -1,0 +1,2 @@
+class D2016OlympicQualifiersConcacafUsaMex021316 < ApplicationRecord
+end

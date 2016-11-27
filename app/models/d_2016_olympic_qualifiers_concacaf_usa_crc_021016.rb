@@ -1,0 +1,2 @@
+class D2016OlympicQualifiersConcacafUsaCrc021016 < ApplicationRecord
+end

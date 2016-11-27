@@ -1,0 +1,2 @@
+class D2016InternationalFriendlyUsaCol041016 < ApplicationRecord
+end
