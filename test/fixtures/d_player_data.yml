@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  TournamentName: MyString
+  Team1: MyString
+  Team2: MyString
+  Date: MyString
+  Score: MyString
+  City: MyString
+  StateCountry: MyString
+  GameId: MyString
+
+two:
+  TournamentName: MyString
+  Team1: MyString
+  Team2: MyString
+  Date: MyString
+  Score: MyString
+  City: MyString
+  StateCountry: MyString
+  GameId: MyString

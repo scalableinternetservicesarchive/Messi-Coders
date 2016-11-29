@@ -1,0 +1,2 @@
+class DPlayerDatum < ApplicationRecord
+end

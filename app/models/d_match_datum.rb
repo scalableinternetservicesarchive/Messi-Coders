@@ -1,0 +1,2 @@
+class DMatchDatum < ApplicationRecord
+end

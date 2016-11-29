@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161127043553) do
+ActiveRecord::Schema.define(version: 20161129044407) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -4699,6 +4699,19 @@ ActiveRecord::Schema.define(version: 20161127043553) do
     t.float    "GKFK_Comp_Pct"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "d_match_data", force: :cascade do |t|
+    t.string   "TournamentName"
+    t.string   "Team1"
+    t.string   "Team2"
+    t.string   "Date"
+    t.string   "Score"
+    t.string   "City"
+    t.string   "StateCountry"
+    t.string   "GameId"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "d_nwsl_2016_bos_crs_050716s", force: :cascade do |t|
@@ -22123,6 +22136,19 @@ ActiveRecord::Schema.define(version: 20161127043553) do
     t.float    "GKFK_Comp_Pct"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "d_player_data", force: :cascade do |t|
+    t.string   "TournamentName"
+    t.string   "Team1"
+    t.string   "Team2"
+    t.string   "Date"
+    t.string   "Score"
+    t.string   "City"
+    t.string   "StateCountry"
+    t.string   "GameId"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "d_shebelieves_cup_2016_alls", force: :cascade do |t|

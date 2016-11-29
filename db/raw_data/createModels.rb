@@ -6,7 +6,7 @@ def import(csvfile)
 
     filename = csvfile[/\/(.+?)(\.[^.]*$|$)/, 1]
     filename = 'd_' + filename
-    createstr = "bin/rails generate model " + filename + " Id:integer"
+    createstr = "bin/rails generate model " + filename
     strings_idx = []
     for idx in 0..game[0].size-1
         header = (game[0][idx]).tr(".", "_")
