@@ -50,16 +50,16 @@
                             <div class="uk-sticky-placeholder">
                                 <div class="button-group filter-button-group" data-uk-sticky="{top:70, boundary: true}">
                                     <div class="uk-container uk-container-center">
-                                        <div class="label-menu">OUR team</div>
+                                        <div class="label-menu"><%= @club.name %></div>
                                         <button class="active" data-filter="*">all
                                         </button>
-                                        <button data-filter=".defender_filter">DEFENDER
+                                        <button data-filter=".Defender_filter">DEFENDER
                                         </button>
-                                        <button data-filter=".forward_filter">FORWARD
+                                        <button data-filter=".Forward_filter">FORWARD
                                         </button>
-                                        <button data-filter=".goalkeeper_filter">GOALKEEPER
+                                        <button data-filter=".Goalkeeper_filter">GOALKEEPER
                                         </button>
-                                        <button data-filter=".midfielder_filter">MIDFIELDER
+                                        <button data-filter=".Midfielder_filter">MIDFIELDER
                                         </button>
                                     </div>
                                 </div>
@@ -73,142 +73,42 @@
                                 </div>
                                 <div class="uk-container uk-container-center alt">
                                     <div class="uk-grid grid1 players-list">
-                                        <div class="uk-width-large-1-4 uk-width-medium-1-2 uk-width-small-1-2 player-item midfielder_filter">
-                                            <div class="player-article">
-                                                <div class="wrapper">
-                                                    <div class="img-wrap">
-                                                        <div class="player-number">
-                                                            <span>
-                                                            21                
-                                                            </span>
-                                                        </div>
-                                                        <div class="bio">
-                                                            <span>
-                                                            <a href="../players/show">bio
-                                                            </a>
-                                                            </span>
-                                                        </div>
-                                                        <a href="../players/show">
-                                                        <img src="../../images/494a6c4fd56d9d2af64b92b6337db693.jpg" class="img-polaroid" alt="Steven Webb" title="Steven Webb">
-                                                        </a>
-                                                    </div>
-                                                    <div class="info">
-                                                        <div class="name">
-                                                            <h3>
-                                                                <a href="../players/show">
-                                                                Steven Webb                    
+                                        <% @club.players.each do |player| %>
+                                            <div class="uk-width-large-1-4 uk-width-medium-1-2 uk-width-small-1-2 player-item <%=player.position%>_filter">
+                                                <div class="player-article">
+                                                    <div class="wrapper">
+                                                        <div class="img-wrap">
+                                                            <div class="player-number">
+                                                                <span>
+                                                                <%= player.number %>               
+                                                                </span>
+                                                            </div>
+                                                            <div class="bio">
+                                                                <span>
+                                                                <a href="../players/show">bio
                                                                 </a>
-                                                            </h3>
+                                                                </span>
+                                                            </div>
+                                                            <a href="../players/show">
+                                                            <img src="../../images/PlayerPics/<%=player.pid%>.jpg" class="img-polaroid" alt="" title="">
+                                                            </a>
                                                         </div>
-                                                        <div class="position">
-                                                            MIDFIELDER 
+                                                        <div class="info">
+                                                            <div class="name">
+                                                                <h3>
+                                                                    <a href="../players/show">
+                                                                    <%= player.firstname %> <%= player.lastname %>                   
+                                                                    </a>
+                                                                </h3>
+                                                            </div>
+                                                            <div class="position">
+                                                                <%= player.position %> 
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="uk-width-large-1-4 uk-width-medium-1-2 uk-width-small-1-2 player-item forward_filter">
-                                            <div class="player-article">
-                                                <div class="wrapper">
-                                                    <div class="img-wrap">
-                                                        <div class="player-number">
-                                                            <span>
-                                                            19                
-                                                            </span>
-                                                        </div>
-                                                        <div class="bio">
-                                                            <span>
-                                                            <a href="../Players/player.html">bio
-                                                            </a>
-                                                            </span>
-                                                        </div>
-                                                        <a href="player.html">
-                                                        <img src="../../images/df207a70fca3a58b07082ce9aca2c538.jpg" class="img-polaroid" alt="John Montgomery" title="John Montgomery">
-                                                        </a>
-                                                    </div>
-                                                    <div class="info">
-                                                        <div class="name">
-                                                            <h3>
-                                                                <a href="../Players/player.html">
-                                                                John Montgomery                    
-                                                                </a>
-                                                            </h3>
-                                                        </div>
-                                                        <div class="position">
-                                                            STRIKER 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="uk-width-large-1-4 uk-width-medium-1-2 uk-width-small-1-2 player-item goalkeeper_filter">
-                                            <div class="player-article">
-                                                <div class="wrapper">
-                                                    <div class="img-wrap">
-                                                        <div class="player-number">
-                                                            <span>
-                                                            35                
-                                                            </span>
-                                                        </div>
-                                                        <div class="bio">
-                                                            <span>
-                                                            <a href="../Players/player.html">bio
-                                                            </a>
-                                                            </span>
-                                                        </div>
-                                                        <a href="player.html">
-                                                        <img src="../../images/bd84c3b0e76d2dd99a75ac9ca2f6ec06.jpg" class="img-polaroid" alt="Johnny Thompson" title="Johnny Thompson">
-                                                        </a>
-                                                    </div>
-                                                    <div class="info">
-                                                        <div class="name">
-                                                            <h3>
-                                                                <a href="player.html">
-                                                                Johnny Thompson                    
-                                                                </a>
-                                                            </h3>
-                                                        </div>
-                                                        <div class="position">
-                                                            goalkeeper 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="uk-width-large-1-4 uk-width-medium-1-2 uk-width-small-1-2 player-item defender_filter">
-                                            <div class="player-article">
-                                                <div class="wrapper">
-                                                    <div class="img-wrap">
-                                                        <div class="player-number">
-                                                            <span>
-                                                            07                
-                                                            </span>
-                                                        </div>
-                                                        <div class="bio">
-                                                            <span>
-                                                            <a href="../Players/player.html">bio
-                                                            </a>
-                                                            </span>
-                                                        </div>
-                                                        <a href="player.html">
-                                                        <img src="../../images/f9bfc5bc85499506c9e18e5afb2eaf2d.jpg" class="img-polaroid" alt="Benjamin Mendoza" title="Benjamin Mendoza">
-                                                        </a>
-                                                    </div>
-                                                    <div class="info">
-                                                        <div class="name">
-                                                            <h3>
-                                                                <a href="player.html">
-                                                                Benjamin Mendoza                    
-                                                                </a>
-                                                            </h3>
-                                                        </div>
-                                                        <div class="position">
-                                                            DEFENDER 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <% end %>
                                     </div>
                                 </div>
                             </div>

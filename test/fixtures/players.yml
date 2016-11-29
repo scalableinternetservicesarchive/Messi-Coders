@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pid: MyString
+  firstname: MyString
+  lastname: MyString
+  clubname: MyString
+  number: MyString
+  dob: MyString
+  position: MyString
+  hometown: MyString
+  homestate: MyString
+  height: MyString
+  school: MyString
+  twitter: MyString
+  club: one
+
+two:
+  pid: MyString
+  firstname: MyString
+  lastname: MyString
+  clubname: MyString
+  number: MyString
+  dob: MyString
+  position: MyString
+  hometown: MyString
+  homestate: MyString
+  height: MyString
+  school: MyString
+  twitter: MyString
+  club: two
