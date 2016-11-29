@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129045513) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20161129065024) do
 
   create_table "clubs", force: :cascade do |t|
     t.string   "name"
@@ -22141,16 +22138,20 @@ ActiveRecord::Schema.define(version: 20161129045513) do
   end
 
   create_table "d_player_data", force: :cascade do |t|
-    t.string   "TournamentName"
-    t.string   "Team1"
-    t.string   "Team2"
-    t.string   "Date"
-    t.string   "Score"
-    t.string   "City"
-    t.string   "StateCountry"
-    t.string   "GameId"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.float    "PID"
+    t.string   "FirstName"
+    t.string   "LastName"
+    t.string   "CLUB"
+    t.float    "NUM"
+    t.string   "DOB"
+    t.string   "POS"
+    t.string   "HomeTown"
+    t.string   "HomeState"
+    t.string   "Height"
+    t.string   "School"
+    t.string   "Twitter"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "d_shebelieves_cup_2016_alls", force: :cascade do |t|

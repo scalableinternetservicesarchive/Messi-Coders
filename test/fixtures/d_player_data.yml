@@ -1,21 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  TournamentName: MyString
-  Team1: MyString
-  Team2: MyString
-  Date: MyString
-  Score: MyString
-  City: MyString
-  StateCountry: MyString
-  GameId: MyString
+  PID: 1.5
+  FirstName: MyString
+  LastName: MyString
+  CLUB: MyString
+  NUM: 1.5
+  DOB: MyString
+  POS: MyString
+  HomeTown: MyString
+  HomeState: MyString
+  Height: MyString
+  School: MyString
+  Twitter: MyString
 
 two:
-  TournamentName: MyString
-  Team1: MyString
-  Team2: MyString
-  Date: MyString
-  Score: MyString
-  City: MyString
-  StateCountry: MyString
-  GameId: MyString
+  PID: 1.5
+  FirstName: MyString
+  LastName: MyString
+  CLUB: MyString
+  NUM: 1.5
+  DOB: MyString
+  POS: MyString
+  HomeTown: MyString
+  HomeState: MyString
+  Height: MyString
+  School: MyString
+  Twitter: MyString
