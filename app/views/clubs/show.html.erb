@@ -15,7 +15,7 @@
                             <div class="uk-cover-background uk-position-relative head-wrap" style="height: 290px; background-image: url('../../images/head-bg.jpg');">
                                 <img class="uk-invisible" src="../../images/head-bg.jpg" alt="" height="290" width="1920">
                                 <div class="uk-position-cover uk-flex uk-flex-center head-title">
-                                    <h1 class="myTeamName">[Insert Team Name]</h1>
+                                    <h1 class="myTeamName"><%= @club.name %></h1>
                                 </div>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
             <ul class="uk-breadcrumb">
                 <li><a href="index.html">Teams</a>
                 </li>
-                <li><a href="index.html" class="myTeamName">[Insert Team Name]</a>
+                <li><a href="index.html" class="myTeamName"><%= @club.name %></a>
                 </li>
             </ul>
         </div>
@@ -41,8 +41,8 @@
 
                         <div class="uk-container uk-container-center tt-gallery-top">
                             <div class="uk-grid" data-uk-grid-match="">
-                                <div class="uk-width-medium-3-10 uk-width-small-1-1 title">[Insert Team Name]</div>
-                                <div class="uk-width-medium-7-10 uk-width-small-1-1 text">[Short Description of Team]</div>
+                                <div class="uk-width-medium-3-10 uk-width-small-1-1 title"><%= @club.name %></div>
+                                <!--- <div class="uk-width-medium-7-10 uk-width-small-1-1 text">[Short Description of Team]</div> --->
                             </div>
                         </div>
 
