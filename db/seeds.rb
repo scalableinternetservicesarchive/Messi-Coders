@@ -59,3 +59,9 @@ csv.each do |row|
 
   p.save
 end
+
+Tournament.create(name: '2016 Concacaf Olympic Qualifier')
+Tournament.create(name: '2016 NWSL')
+Tournament.create(name: '2016 Olympics')
+Tournament.create(name: '2016 She Believes Cup')
+Tournament.create(name: 'International Friendlies')
