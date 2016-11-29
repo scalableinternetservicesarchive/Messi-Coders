@@ -10930,8 +10930,8 @@ q {
 .match-list-wrap .match-list-item .date {
   margin-right: 30px;
   width: 44px;
-  height: 44px;
-  border: 1px solid #4a4a48;
+  height: 35px;
+  /*border: 1px solid #4a4a48;*/
   color: #fff;
   font-size: 12px;
   line-height: 15px;
@@ -13273,7 +13273,7 @@ q {
   opacity: 1;
 }
 .tt-gallery-top {
-  padding-bottom: 70px;
+  padding-bottom: 25px;
 }
 .tt-gallery-top .title {
   font-size: 38px;

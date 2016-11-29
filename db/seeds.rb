@@ -14,7 +14,7 @@ Club.create(name: 'FC Kansas City')
 Club.create(name: 'Orlando Pride')
 Club.create(name: 'Portland Thorns FC')
 Club.create(name: 'Seattle Reign FC')
-Club.create(name: 'Sky Blue FC')
+Club.create(name: 'New Jersey Sky Blue FC')
 Club.create(name: 'Washington Spirit')
 Club.create(name: 'Western New York Flash')
 
@@ -49,7 +49,7 @@ csv.each do |row|
     p.club_id = 6
   when "Seattle Reign FC"
     p.club_id = 7
-  when "New Jersey Sky Blue"
+  when "New Jersey Sky Blue Fc"
     p.club_id = 8
   when "Washington Spirit"
     p.club_id = 9
