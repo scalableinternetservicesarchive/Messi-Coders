@@ -60,8 +60,36 @@ csv.each do |row|
   p.save
 end
 
-Tournament.create(name: '2016 Concacaf Olympic Qualifier')
+Tournament.create(name: '2016 CONCACAF Olympic Qualifiers')
 Tournament.create(name: '2016 NWSL')
 Tournament.create(name: '2016 Olympics')
 Tournament.create(name: '2016 She Believes Cup')
-Tournament.create(name: 'International Friendlies')
+Tournament.create(name: '2016 International Friendlies')
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'MatchData.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+  m = Match.new
+  m.tournamentname = row['Tournament Name']
+  m.team1 = row['Team 1']
+  m.team2 = row['Team 2']
+  m.date = row['Date']
+  m.score = row['Score']
+  m.city = row['City']
+  m.state = row['State/Country']
+  m.gameid = row['Game Id']
+  case row['Tournament Name']
+  when "2016 CONCACAF Olympic Qualifers"
+    m.tournament_id = 1
+  when "2016 NWSL"
+    m.tournament_id = 2
+  when "2016 Olympics"
+    m.tournament_id = 3
+  when "2016 She Believes Cup"
+    m.tournament_id = 4
+  when "2016 International Friendlies"
+    m.tournament_id = 5
+  end
+
+  m.save
+end
