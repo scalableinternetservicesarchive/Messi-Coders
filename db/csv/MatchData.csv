@@ -1,0 +1,163 @@
+TournamentName,Team1,Team2,Date,Score,City,StateCountry,GameId
+2016 She Believes Cup,Germany,France,3/3/16,1-0,Tampa,Florida,N/A
+2016 She Believes Cup,United States,England,3/3/16,1-0,Tampa,Florida,shebelieves-cup-2016-usa-eng-030316
+2016 She Believes Cup,United States,France,3/6/19,1-0,Nashville,Tennessee,shebelieves-cup-2016-usa-fra-030616
+2016 She Believes Cup,Germany,England,3/6/19,2-1,Nashville,Tennessee,shebelieves-cup-2016-eng-ger-030616
+2016 She Believes Cup,France,England,3/9/16,0-0,Boca Raton,Florida,shebelieves-cup-2016-usa-ger-030916.
+2016 She Believes Cup,United States,Germany,3/9/16,2-1,Boca Raton,Florida,shebelieves-cup-2016-usa-ger-030916
+2016 Olympics,Sweden,South Africa,8/3/16,1-0,Rio de Janeiro,Brazil,N/A
+2016 Olympics,Brazil,China,8/3/16,3-0,Rio de Janeiro,Brazil,N/A
+2016 Olympics,Canada,Australia,8/3/16,2-0,Sao Paulo,Brazil,N/A
+2016 Olympics,Zimbabwe,Germany,8/3/16,1-6,Sao Paulo,Brazil,N/A
+2016 Olympics,United States,New Zealand,8/3/16,2-0,Mineirao,Brazil,2016-olympics-usa-nzl-080316
+2016 Olympics,France,Colombia,8/3/16,4-0,Mineirao,Brazil,N/A
+2016 Olympics,South Africa,China,8/6/16,0-2,Rio de Janeiro,Brazil,N/A
+2016 Olympics,Brazil,Sweden,8/6/16,5-1,Rio de Janeiro,Brazil,N/A
+2016 Olympics,Canada,Zimbabwe,8/6/16,3-1,Sao Paulo,Brazil,N/A
+2016 Olympics,Germany,Australia,8/6/16,2-2,Sao Paulo,Brazil,N/A
+2016 Olympics,United States,France,8/6/16,1-0,Mineirao,Brazil,2016-olympics-usa-fra-080616
+2016 Olympics,Colombia,New Zealand,8/6/16,0-1,Mineirao,Brazil,N/A
+2016 Olympics,South Africa,Brazil,8/9/16,0-0,Manaus,Brazil,N/A
+2016 Olympics,China,Sweden,8/9/16,0-0,Brasilia,Brazil,N/A
+2016 Olympics,Australia,Zimbabwe,8/9/16,6-1,Salvador,Brazil,N/A
+2016 Olympics,Germany,Canada,8/9/16,1-2,Brasilia,Brazil,N/A
+2016 Olympics,Colombia,United States,8/9/16,2-2,Manaus,Brazil,2016-olympics-usa-col-080916
+2016 Olympics,New Zealand,France,8/9/16,0-3,Salvador,Brazil,N/A
+2016 Olympics,United States,Sweden,8/12/16,1-1 (3-4 PKs),Brasilia,Brazil,2016-olympics-usa-swe-081216
+2016 Olympics,China,Germany,8/12/16,0-1,Salvador,Brazil,N/A
+2016 Olympics,Canada,France,8/12/16,1-0,Sao Paulo,Brazil,N/A
+2016 Olympics,Brazil,Australia,8/12/16,0-0 (7-6 PKs),Mineirao,Brazil,N/A
+2016 Olympics,Brazil,Sweden,8/16/16,0-0 (3-4 PKs),Rio de Janeiro,Brazil,N/A
+2016 Olympics,Canada,Germany,8/16/16,0-2,Mineirao,Brazil,N/A
+2016 Olympics,Brazil,Canada,8/19/16,1-2,Sao Paulo,Brazil,N/A
+2016 Olympics,Sweden,Germany,8/19/16,1-2,Rio de Janeiro,Brazil,N/A
+2016 International Friendlies,United States,Ireland,1/23/16,5-0,San Diego,California,2016-international-friendly-usa-irl-0123116
+2016 International Friendlies,United States,Colombia,4/6/16,7-0,East Hartford,Connecticut,2016-international-friendly-usa-col-040616
+2016 International Friendlies,United States,Colombia,4/10/16,3-0,Chester,Pennsylvania,2016-international-friendly-usa-col-041016
+2016 International Friendlies,United States,Japan,6/2/16,3-3,Commerce City,Colorado,2016-international-friendly-usa-jpn-060216
+2016 International Friendlies,United States,Japan,6/5/16,2-0,Cleveland,Ohio,2016-international-friendly-usa-jpn-060516
+2016 International Friendlies,United States,South Africa,7/9/16,1-0,Chicago,Illinois,2016-international-friendly-usa-rsa-070916
+2016 International Friendlies,United States,Costa Rica,7/22/16,4-0,Kansas City,Kansas,2016-international-friendly-usa-crc-072216
+2016 International Friendlies,United States,Switzerland,10/19/16,4-0,Sandy,Utah,2016-international-friendly-usa-sui-101916
+2016 International Friendlies,United States,Switzerland,10/23/16,5-1,Minneapolis,Minnesota,2016-international-friendly-usa-sui-102316
+2016 NWSL,Washington Spirit,Boston Breakers,4/16/16,1-0,Boyds,Maryland,nwsl-2016-was-bos-041616
+2016 NWSL,Houston Dash,Chicago Red Stars,4/16/16,3-1,Houston,Texas,nwsl-2016-hou-crs-041616
+2016 NWSL,FC Kansas City,Western New York Flash,4/16/16,0-1,Kansas City,Kansas,nwsl-2016-fckc-wnyf-041616
+2016 NWSL,Seattle Reign,Sky Blue FC,4/17/16,1-2,Seattle,Washington,nwsl-2016-srfc-sbfc-041716
+2016 NWSL,Portland Thorns FC,Orlando Pride,4/17/16,2-1,Portland,Oregon,nwsl-2016-ptfc-orl-041716
+2016 NWSL,Chicago Red Stars,Western New York Flash,4/23/16,1-0,Chicago,Illinois,nwsl-2016-crs-wnyf-042316
+2016 NWSL,Orlando Pride,Houston Dash,4/23/16,3-1,Orlando,Florida,nwsl-2016-orl-hou-042316
+2016 NWSL,FC Kansas City,Portland Thorns FC,4/23/16,1-1,Kansas City,Kansas,nwsl-2016-fckc-ptfc-042316
+2016 NWSL,Sky Blue FC,Washington Spirit,4/24/16,1-2,Piscataway,New Jersey,nwsl-2016-sbfc-was-042416
+2016 NWSL,Boston Breakers,Seattle Reign,4/24/16,0-3,Boston,Massachusetts,nwsl-2016-bos-srfc-042416
+2016 NWSL,Western New York Flash,Washington Spirit,4/29/16,0-3,Rochester,New York,nwsl-2016-wnyf-was-042916
+2016 NWSL,Houston Dash,Sky Blue FC,4/29/16,0-0,Houston,Texas,nwsl-2016-hou-sbfc-042916
+2016 NWSL,Boston Breakers,Portland Thorns FC,5/1/16,0-1,Boston,Massachusetts,nwsl-2016-bos-ptfc-050116
+2016 NWSL,Chicago Red Stars,Orlando Pride,5/1/16,1-0,Chicago,Illinois,nwsl-2016-crs-orl-050116
+2016 NWSL,Seattle Reign,FC Kansas City,5/1/16,1-0,Seattle,Washington,nwsl-2016-srfc-fckc-050116
+2016 NWSL,Boston Breakers,Chicago Red Stars,5/7/16,0-1,Boston,Massachusetts,nwsl-2016-bos-crs-050716
+2016 NWSL,Washington Spirit,Portland Thorns FC,5/7/16,0-0,Boyds,Maryland,nwsl-2016-was-ptfc-050716
+2016 NWSL,Sky Blue FC,Western New York Flash,5/7/16,1-2,Piscataway,New Jersey,nwsl-2016-sbfc-wnyf-050716
+2016 NWSL,FC Kansas City,Houston Dash,5/7/16,1-2,Kansas City,Kansas,nwsl-2016-fckc-hou-050716
+2016 NWSL,Orlando Pride,Seattle Reign,5/8/16,2-0,Orlando,Florida,nwsl-2016-orl-srfc-050816
+2016 NWSL,Sky Blue FC,Boston Breakers,5/13/16,1-0,Piscataway,New Jersey,nwsl-2016-sbfc-bos-051316
+2016 NWSL,FC Kansas City,Chicago Red Stars,5/13/16,0-0,Kansas City,Kansas,nwsl-2016-fckc-crs-051316
+2016 NWSL,Washington Spirit,Houston Dash,5/14/16,1-0,Boyds,Maryland,nwsl-2016-was-hou-051416
+2016 NWSL,Orlando Pride,Western New York Flash,5/14/16,1-0,Orlando,Florida,nwsl-2016-orl-wnyf-051416
+2016 NWSL,Seattle Reign,Portland Thorns FC,5/14/16,1-1,Seattle,Washington,nwsl-2016-srfc-ptfc-051416
+2016 NWSL,Houston Dash,Orlando Pride,5/20/16,0-1,Houston,Texas,nwsl-2016-hou-orl-052016
+2016 NWSL,Western New York Flash,Sky Blue FC,5/21/16,5-2,Rochester,New York,nwsl-2016-wnyf-sbfc-052116
+2016 NWSL,Portland Thorns FC,Washington Spirit,5/21/16,4-1,Portland,Oregon,nwsl-2016-ptfc-was-052116
+2016 NWSL,Boston Breakers,FC Kansas City,5/22/16,1-0,Boston,Massachusetts,nwsl-2016-bos-fckc-052216
+2016 NWSL,Seattle Reign,Chicago Red Stars,5/22/16,1-2,Seattle,Washington,nwsl-2016-srfc-crs-052216
+2016 NWSL,Western New York Flash,Boston Breakers,5/27/16,4-0,Rochester,New York,nwsl-2016-wnyf-bos-052716
+2016 NWSL,FC Kansas City,Orlando Pride,5/28/16,2-0,Kansas City,Kansas,nwsl-2016-fckc-orl-052816
+2016 NWSL,Portland Thorns FC,Seattle Reign,5/29/16,0-0,Portland,Oregon,nwsl-2016-ptfc-srfc-052916
+2016 NWSL,Chicago Red Stars,Sky Blue FC,5/29/16,1-1,Chicago,Illinois,nwsl-2016-crs-sbfc-052916
+2016 NWSL,Boston Breakers,Washington Spirit,6/10/16,1-1,Boston,Massachusetts,nwsl-2016-bos-was-061016
+2016 NWSL,Western New York Flash,Orlando Pride,6/11/16,1-0,Rochester,New York,nwsl-2016-wnyf-orl-061116
+2016 NWSL,Sky Blue FC,FC Kansas City,6/11/16,1-1,Piscataway,New Jersey,nwsl-2016-sbfc-fckc-061116
+2016 NWSL,Chicago Red Stars,Portland Thorns FC,6/12/16,1-1,Chicago,Illinois,nwsl-2016-crs-ptfc-061216
+2016 NWSL,Seattle Reign,Houston Dash,6/12/16,1-0,Seattle,Washington,nwsl-2016-srfc-hou-061216
+2016 NWSL,Western New York Flash,Portland Thorns FC,6/17/16,0-2,Rochester,New York,nwsl-2016-wnyf-ptfc-061716
+2016 NWSL,Washington Spirit,Orlando Pride,6/18/16,2-0,Boyds,Maryland,nwsl-2016-was-orl-061816
+2016 NWSL,Chicago Red Stars,Boston Breakers,6/18/16,3-0,Chicago,Illinois,nwsl-2016-crs-bos-061816
+2016 NWSL,Sky Blue FC,Seattle Reign,6/19/16,0-0,Piscataway,New Jersey,nwsl-2016-sbfc-srfc-061916
+2016 NWSL,Houston Dash,FC Kansas City,6/19/16,0-1,Houston,Texas,nwsl-2016-hou-fckc-061916
+2016 NWSL,Portland Thorns FC,Chicago Red Stars,6/22/16,2-0,Portland,Oregon,nwsl-2016-ptfc-crs-062216
+2016 NWSL,Orlando Pride,Houston Dash,6/23/16,1-0,Orlando,Florida,nwsl-2016-orl-hou-062316
+2016 NWSL,Western New York Flash,Boston Breakers,6/24/16,7-1,Rochester,New York,nwsl-2016-wnyf-bos-062416
+2016 NWSL,Washington Spirit,Sky Blue FC,6/25/16,1-2,Boyds,Maryland,nwsl-2016-was-sbfc-062516
+2016 NWSL,FC Kansas City,Seattle Reign,6/25/16,0-0,Kansas City,Kansas,N/A
+2016 NWSL,Orlando Pride,Portland Thorns FC,6/26/16,1-2,Orlando,Florida,nwsl-2016-orl-ptfc-062616
+2016 NWSL,Western New York Flash,Chicago Red Stars,7/1/16,2-0,Rochester,New York,N/A
+2016 NWSL,Washington Spirit,FC Kansas City,7/2/16,2-0,Boyds,Maryland,nwsl-2016-was-fckc-070216
+2016 NWSL,Seattle Reign,Boston Breakers,7/2/16,2-0,Seattle,Washington,N/A
+2016 NWSL,Portland Thorns FC,Sky Blue FC,7/2/16,2-1,Portland,Oregon,nwsl-2016-ptfc-sbfc-070216
+2016 NWSL,Western New York Flash,Seattle Reign,7/9/16,3-2,Rochester,New York,N/A
+2016 NWSL,Washington Spirit,Chicago Red Stars,7/9/16,2-0,Boyds,Maryland,N/A
+2016 NWSL,Sky Blue FC,Houston Dash,7/9/16,1-0,Piscataway,New Jersey,N/A
+2016 NWSL,Portland Thorns FC,FC Kansas City,7/9/16,1-2,Portland,Oregon,nwsl-2016-ptfc-fckc-070916
+2016 NWSL,Orlando Pride,Boston Breakers,7/10/16,2-1,Orlando,Florida,N/A
+2016 NWSL,FC Kansas City,Washington Spirit,7/16/16,2-3,Kansas City,Kansas,N/A
+2016 NWSL,Orlando Pride,Chicago Red Stars,7/16/16,0-1,Orlando,Florida,N/A
+2016 NWSL,Houston Dash,Portland Thorns FC,7/16/16,3-0,Houston,Texas,N/A
+2016 NWSL,Seattle Reign,Western New York Flash,7/16/16,1-1,Seattle,Washington,N/A
+2016 NWSL,Boston Breakers,Sky Blue FC,7/7/16,2-3,Boston,Massachusetts,N/A
+2016 NWSL,Western New York Flash,FC Kansas City,7/23/16,0-1,Rochester,New York,N/A
+2016 NWSL,Sky Blue FC,Washington Spirit,7/23/16,1-0,Piscataway,New Jersey,nwsl-2016-sbfc-was-072316
+2016 NWSL,Chicago Red Stars,Houston Dash,7/23/16,1-1,Chicago,Illinois,N/A
+2016 NWSL,Seattle Reign,Orlando Pride,7/23/16,5-2,Seattle,Washington,N/A
+2016 NWSL,Chicago Red Stars,FC Kansas City,7/30/16,1-0,Chicago,Illinois,N/A
+2016 NWSL,Houston Dash,Western New York Flash,7/30/16,3-3,Houston,Texas,N/A
+2016 NWSL,Portland Thorns FC,Seattle Reign,7/30/16,1-0,Portland,Oregon,nwsl-2016-ptfc-srfc-073016
+2016 NWSL,Washington Spirit,Sky Blue FC,7/31/16,3-1,Boyds,Maryland,N/A
+2016 NWSL,Boston Breakers,Orlando Pride,7/31/16,1-0,Boston,Massachusetts,N/A
+2016 NWSL,Houston Dash,Washington Spirit,8/18/16,1-2,Houston,Texas,N/A
+2016 NWSL,Orlando Pride,Washington Spirit,8/26/16,1-2,Orlando,Florida,N/A
+2016 NWSL,Seattle Reign,Portland Thorns FC,8/27/16,3-1,Seattle,Washington,nwsl-2016-srfc-ptfc-082716
+2016 NWSL,Western New York Flash,Houston Dash,8/27/16,2-2,Rochester,New York,N/A
+2016 NWSL,Sky Blue FC,Chicago Red Stars,8/27/16,1-3,Piscataway,New Jersey,N/A
+2016 NWSL,FC Kansas City,Boston Breakers,8/28/16,0-2,Kansas City,Kansas,N/A
+2016 NWSL,Boston Breakers,Houston Dash,8/31/16,1-2,Boston,Massachusetts,N/A
+2016 NWSL,Washington Spirit,Western New York Flash,9/3/16,1-1,Boyds,Maryland,N/A
+2016 NWSL,Houston Dash,Orlando Pride,9/3/16,4-2,Houston,Texas,N/A
+2016 NWSL,FC Kansas City,Sky Blue FC,9/4/16,2-1,Kansas City,Kansas,N/A
+2016 NWSL,Portland Thorns FC,Boston Breakers,9/4/16,5-1,Portland,Oregon,N/A
+2016 NWSL,Chicago Red Stars,Seattle Reign,9/4/16,2-2,Chicago,Illinois,N/A
+2016 NWSL,Boston Breakers,Western New York Flash,9/7/16,2-2,Boston,Massachusetts,N/A
+2016 NWSL,Washington Spirit,Seattle Reign,9/7/16,2-1,Boyds,Maryland,N/A
+2016 NWSL,Sky Blue FC,Orlando Pride,9/7/16,1-1,Piscataway,New Jersey,N/A
+2016 NWSL,Chicago Red Stars,FC Kansas City,9/7/16,2-3,Chicago,Illinois,N/A
+2016 NWSL,Portland Thorns FC,Houston Dash,9/7/16,3-0,Portland,Oregon,N/A
+2016 NWSL,Orlando Pride,Sky Blue FC,9/10/16,1-2,Orlando,Florida,N/A
+2016 NWSL,FC Kansas City,Chicago Red Stars,9/11/16,0-0,Kansas City,Kansas,N/A
+2016 NWSL,Houston Dash,Boston Breakers,9/11/16,4-1,Houston,Texas,N/A
+2016 NWSL,Portland Thorns FC,Western New York Flash,9/11/16,3-2,Portland,Oregon,nwsl-2016-ptfc-wnyf-091116
+2016 NWSL,Seattle Reign,Washington Spirit,9/11/16,2-0,Seattle,Washington,N/A
+2016 NWSL,Orlando Pride,FC Kansas City,9/24/16,1-2,Orlando,Florida,N/A
+2016 NWSL,Boston Breakers,Western New York Flash,9/24/16,0-4,Boston,Massachusetts,N/A
+2016 NWSL,Chicago Red Stars,Washington Spirit,9/24/16,3-1,Chicago,Illinois,N/A
+2016 NWSL,Sky Blue FC,Portland Thorns FC,9/25/16,1-3,Piscataway,New Jersey,N/A
+2016 NWSL,Houston Dash,Seattle Reign,9/25/16,2-3,Houston,Texas,N/A
+2016 NWSL,Washington Spirit,Chicago Red Stars,9/30/16,2-1,Boyds,Maryland,N/A
+2016 NWSL,Portland Thorns FC,Western New York Flash,10/2/16,3-4,Portland,Oregon,N/A
+2016 NWSL,Washington Spirit,Western New York Flash,10/9/16,2-2 (2-3 PKs),Boyds,Maryland,N/A
+2016 NWSL,NWSL,NWSL,Week 1,N/A,N/A,N/A,nwsl-2016-week-1
+2016 NWSL,NWSL,NWSL,Week 2,N/A,N/A,N/A,nwsl-2016-week-2
+2016 NWSL,NWSL,NWSL,Week 3,N/A,N/A,N/A,nwsl-2016-week-3
+2016 NWSL,NWSL,NWSL,Week 4,N/A,N/A,N/A,nwsl-2016-week-4
+2016 NWSL,NWSL,NWSL,Week 5,N/A,N/A,N/A,nwsl-2016-week-5
+2016 NWSL,NWSL,NWSL,Week 6,N/A,N/A,N/A,nwsl-2016-week-6
+2016 NWSL,NWSL,NWSL,Week 7,N/A,N/A,N/A,nwsl-2016-week-7
+2016 NWSL,NWSL,NWSL,Week 8,N/A,N/A,N/A,nwsl-2016-week-8
+2016 NWSL,NWSL,NWSL,Week 9,N/A,N/A,N/A,nwsl-2016-week-9
+2016 NWSL,NWSL,NWSL,Week 10,N/A,N/A,N/A,nwsl-2016-week-10
+2016 NWSL,NWSL,NWSL,Week 11,N/A,N/A,N/A,nwsl-2016-week-11
+2016 NWSL,NWSL,NWSL,Season,N/A,N/A,N/A,nwsl-2016-season
+2016 CONCACAF Olympic Qualifers,United States,Costa Rica,2/10/16,5-0,Frisco,Texas,2016-olympic-qualifiers-concacaf-usa-crc-021016
+2016 CONCACAF Olympic Qualifers,United States,Mexico,2/13/16,1-0,Frisco,Texas,2016-olympic-qualifiers-concacaf-usa-mex-021316
+2016 CONCACAF Olympic Qualifers,United States,Puerto Rico,2/15/16,10-0,Frisco,Texas,2016-olympic-qualifiers-concacaf-usa-pur-021516
+2016 CONCACAF Olympic Qualifers,United States,Trinidad & Tobago,2/19/16,5-0,Houston,Texas,2016-olympic-qualifiers-concacaf-usa-tri-021916
+2016 CONCACAF Olympic Qualifers,United States,Canada,2/21/16,2-0,Houston,Texas,2016-olympic-qualifiers-concacaf-usa-can-022116
+2016 CONCACAF Olympic Qualifers,United States,CONCACAF,ALL,N/A,N/A,N/A,2016-olympic-qualifiers-concacaf-all
