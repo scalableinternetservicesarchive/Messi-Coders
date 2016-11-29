@@ -16,7 +16,7 @@
                             <div class="uk-cover-background uk-position-relative head-wrap" style="height: 290px; background-image: url('../../images/head-bg.jpg');">
                                 <img class="uk-invisible" src="../../images/head-bg.jpg" alt="" height="290" width="1920">
                                 <div class="uk-position-cover uk-flex uk-flex-center head-title">
-                                    <h1 ><b class="myPlayerName">Christen Press</b></h1>
+                                    <h1 ><b class="myPlayerName"><%= @player.firstname %> <%= @player.lastname %></b></h1>
                                 </div>
                             </div>
                         </div>
@@ -27,11 +27,11 @@
 
         <div class="uk-container uk-container-center alt">
             <ul class="uk-breadcrumb">
-                <li><a href="index.html">NWSL</a>
+                <li><a>NWSL</a>
                 </li>
-                <li><a href="players.html">Chicago Red Stars</a> <!--- TO-DO: Potentially make this dynamic- if CRS-> Chicago Red Stars--->
+                <li><a href="../clubs/<%= @player.club_id %>"><%= @player.clubname %></a> 
                 </li>
-                <li  class="uk-active"><span class="myPlayerName">Christen Press</span>
+                <li  class="uk-active"><span class="myPlayerName"><%= @player.firstname %> <%= @player.lastname %></span>
                 </li>
             </ul>
         </div>
@@ -53,32 +53,32 @@
                                         <div class="uk-grid">
                                             <div class="uk-width-2-10">
                                                 <div class="avatar">
-                                                    <img style= "width:100%" src="http://chicagoredstars.com/assets/2016/01/Untitled-1_0005_ChicagoRedStarsHeadShots-98.jpg">                    
+                                                    <img style= "width:100%" src="../../images/PlayerPics/<%=@player.pid%>.jpg">                    
                                                 </div>
                                             </div>
                                             <div class="uk-width-1-12">
                                                 <!--- Have to trace back these classes in html to change them--->
                                                 <div class="number">
-                                                    23                    
+                                                    <%= @player.number %>                   
                                                 </div>
                                             </div>
                                             <div class="uk-width-6-12">
                                                 <div class="name">
                                                     <h2>
-                                                        <span class="myPlayerName">Christen Press</span>                     
+                                                        <span class="myPlayerName"><%= @player.firstname %> <%= @player.lastname %></span>                     
                                                     </h2>
                                                 </div>
                                                 <div class="wrap">
                                                     <ul class="info">
-                                                        <li><span>CLUB(S)</span><span>CHICAGO RED STARS, USWNT</span></li>
-                                                        <li><span>POSITION</span><span>FORWARD</span></li>
-                                                        <li><span>BIRTHDATE</span><span>12/09/1988</span></li>
-                                                        <li><span>HOMETOWN</span><span>PALOS VERDES, CA</span></li>
-                                                        <li><span>HEIGHT</span><span>5 ft 7 in</span></li>
+                                                        <li><span>CLUB(S)</span><span><%= @player.clubname %>, USWNT</span></li>
+                                                        <li><span>POSITION</span><span><%= @player.position %></span></li>
+                                                        <li><span>BIRTHDATE</span><span><%= @player.dob %></span></li>
+                                                        <li><span>HOMETOWN</span><span><%= @player.hometown %>, <%= @player.homestate %></span></li>
+                                                        <li><span>HEIGHT</span><span><%= @player.height %></span></li>
                                                     </ul>
                                                     <ul class="socials">
                                                         <li class="twitter">
-                                                            <a href="http://twitter.com/christenpress" target="_blank" rel="nofollow">
+                                                            <a href="http://twitter.com/<%=@player.twitter%>" target="_blank" rel="nofollow">
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -114,7 +114,7 @@
                                 </div>
                             </article>
     </div>
-    
+  <!---  
     <script language="javascript">
         function fillElement(elementName, newText) {
             var elements  = document.getElementsByClassName(elementName);
@@ -127,7 +127,7 @@
             fillElement("myPlayerName", "Make this page dynamic");
         }
     </script>
-
+--->
 </body>
 
 </html>

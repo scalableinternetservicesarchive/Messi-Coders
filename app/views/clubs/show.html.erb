@@ -26,9 +26,9 @@
 
         <div class="uk-container uk-container-center alt">
             <ul class="uk-breadcrumb">
-                <li><a href="index.html">Teams</a>
+                <li><a>Teams</a>
                 </li>
-                <li><a href="index.html" class="myTeamName"><%= @club.name %></a>
+                <li><a href="" class="myTeamName"><%= @club.name %></a>
                 </li>
             </ul>
         </div>
@@ -85,18 +85,18 @@
                                                             </div>
                                                             <div class="bio">
                                                                 <span>
-                                                                <a href="../players/show">bio
+                                                                <%= link_to 'Bio', player_path(player) %>
                                                                 </a>
                                                                 </span>
                                                             </div>
-                                                            <a href="../players/show">
+                                                            <a href="../players/<%= player.id %>">
                                                             <img src="../../images/PlayerPics/<%=player.pid%>.jpg" class="img-polaroid" alt="" title="">
                                                             </a>
                                                         </div>
                                                         <div class="info">
                                                             <div class="name">
                                                                 <h3>
-                                                                    <a href="../players/show">
+                                                                    <a href="../players/<%= player.id %>">
                                                                     <%= player.firstname %> <%= player.lastname %>                   
                                                                     </a>
                                                                 </h3>
