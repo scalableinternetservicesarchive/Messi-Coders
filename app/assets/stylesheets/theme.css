@@ -7799,6 +7799,7 @@ a.uk-thumbnail:focus {
 .uk-container-center {
   margin-left: auto;
   margin-right: auto;
+  
 }
 /* Clearing
  ========================================================================== */
@@ -13374,6 +13375,7 @@ q {
 }
 .player-top .wrap {
   font-size: 0;
+  margin-bottom: 20px;
 }
 .player-top .wrap .socials {
   padding: 0 0 0 20px;
@@ -13431,6 +13433,8 @@ q {
   background: #e8e8e8;
 }
 .player-single .avatar {
+  width: 256px;
+  height: 300px;
   border: 4px solid #00afd8;
   box-shadow: 0 0 3px 0 #000;
 }
@@ -13439,9 +13443,10 @@ q {
   border: none;
 }
 .player-single .number {
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
+  width: 60px;
+  height: 60px;
+  margin-left: 40px;
+  line-height: 60px;
   vertical-align: top;
   text-align: center;
   background: #00afd8;
@@ -13450,6 +13455,7 @@ q {
 }
 .player-single .name h2 {
   margin-bottom: 50px;
+  margin-left: 20px;
   padding: 14px 0 0;
   text-transform: uppercase;
   font-size: 38px;
