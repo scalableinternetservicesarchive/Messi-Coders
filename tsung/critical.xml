@@ -136,7 +136,6 @@
       <thinktime value="4" random="true"></thinktime>
     </session>
 
-<sessions>
     <session name="news-session" probability="100" type="ts_http">
 
       <!-- start out at the dashboard. -->
