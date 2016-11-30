@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
-    /*http_basic_authenticate_with name: "Futbolista", password: "messicoder", except: [:index, :show]*/
-    /*commented out authentication for load testing*/
+    #http_basic_authenticate_with name: "Futbolista", password: "messicoder", except: [:index, :show]
+    #commented out authentication for load testing
     
     def index
         @news = News.all
