@@ -121,7 +121,7 @@
 
       <!-- User searches for player named "Julie"  -->
       <request>
-        <http url='/players?utf8=%E2%9C%93&search=Julie&commit=Search' version='1.1' method='GET'></http>
+        <http url='/players?utf8=%E2%9C%93&amp;search=Julie&amp;commit=Search' version='1.1' method='GET'></http>
       </request>
 
       <!-- wait for up to 2 seconds, user is looking at results -->
@@ -181,22 +181,22 @@
         </http>
       </request>
 
-      <!-- visit the news page.  -->
+      visit the news page.  
       <request>
         <http url='/news' version='1.1' method='GET'></http>
       </request>
 
-      <!-- wait for up to 5 seconds, user is reading the news and decides to delete news 
+      wait for up to 5 seconds, user is reading the news and decides to delete news 
       <thinktime value="5" random="true"></thinktime>
 
-      <!-- delete the news we just created 
+       delete the news we just created 
       <request subst="true">
         <http url="%%_created_news_url%%" method="DELETE">
         </http>
       </request>
 
-      <!-- Uncomment the following to debug print your dynamic variables  --> 
-      <!--
+       Uncomment the following to debug print your dynamic variables  
+      
       <setdynvars sourcetype="eval" code="fun( {Pid, DynVars} ) ->
         io:format([126, $p, 126, $n, 126, $n], [DynVars]),
         ok end.">
