@@ -87,9 +87,13 @@
                                     </div>
                                 </div>
                             </li>
-                                  <div class="container-4">
-                                    <input type="search" id="search" placeholder="Search..." />
-                                    <button class="icon"><i class="fa fa-search"></i></button>
+                                 <div class="container-4">
+                                    <%= form_tag(players_path, :method => "get", id: "search-form") do %>
+                                    <%= text_field_tag :search, params[:search], placeholder: "Search Players" %>
+                                    <%= submit_tag "Search" %>
+                                    <% end %>
+                                    <!---<input type="search" id="search" placeholder="Search..." />
+                                    <button class="icon"><i class="fa fa-search"></i></button>--->
                                   </div>
                             
                         </ul>
@@ -97,5 +101,4 @@
                     </div>
                 </nav>
             </div>
-
         </div>

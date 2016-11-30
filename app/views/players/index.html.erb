@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+</head>
+
+<body class="tm-isblog tt-players-page" style="overflow-x: hidden">
+    <div class="over-wrap">
+        <div class="tm-top-a-box tm-full-width tm-box-bg-1 ">
+            <div class="uk-container uk-container-center">
+                <section id="tm-top-a" class="tm-top-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
+
+                    <div class="uk-width-1-1 uk-row-first">
+                        <div class="uk-panel">
+                            <div class="uk-cover-background uk-position-relative head-wrap" style="height: 290px; background-image: url('../../images/head-bg.jpg');">
+                                <img class="uk-invisible" src="../../images/head-bg.jpg" alt="" height="290" width="1920">
+                                <div class="uk-position-cover uk-flex uk-flex-center head-title">
+                                    <h1 class="myTeamName">Players</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="uk-container uk-container-center alt">
+            <ul class="uk-breadcrumb">
+                <li><a>Teams</a>
+                </li>
+                <li><a href="" class="myTeamName">Players</a>
+                </li>
+            </ul>
+        </div>
+        
+
+        <div class="uk-container uk-container-center">
+            <div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match="" data-uk-grid-margin="">
+                <div class="tm-main uk-width-medium-1-1 uk-row-first">
+                    <main id="tm-content" class="tm-content">
+
+                        <div class="uk-container uk-container-center tt-gallery-top">
+                            <div class="uk-grid" data-uk-grid-match="">
+                                <div class="uk-width-medium-3-10 uk-width-small-1-1 title">Players</div>
+                                <!--- <div class="uk-width-medium-7-10 uk-width-small-1-1 text">[Short Description of Team]</div> --->
+                            </div>
+                        </div>
+
+                        <div class="list-players-wrapper">
+                            <div class="list-players-wrap" id="boundary">
+                                <div class="left-player">
+                                    <img src="../../images/left-player-bg.png" alt="">
+                                </div>
+                                <div class="right-player">
+                                    <img src="../../images/right-player-bg.png" alt="">
+                                </div>
+                                <div class="uk-container uk-container-center alt">
+                                    <div class="uk-grid grid1 players-list" style="height: 400px">
+                                        <% @players.each do |player| %>
+                                            <div class="uk-width-large-1-4 uk-width-medium-1-2 uk-width-small-1-2 player-item <%=player.position%>_filter">
+                                                <div class="player-article">
+                                                    <div class="wrapper">
+                                                        <div class="img-wrap">
+                                                            <div class="player-number">
+                                                                <span>
+                                                                <%= player.number %>               
+                                                                </span>
+                                                            </div>
+                                                            <div class="bio">
+                                                                <span>
+                                                                <%= link_to 'Bio', player_path(player) %>
+                                                                </a>
+                                                                </span>
+                                                            </div>
+                                                            <a href="../players/<%= player.id %>">
+                                                            <img src="../../images/PlayerPics/<%=player.pid%>.jpg" class="img-polaroid" alt="" title="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="name">
+                                                                <h3>
+                                                                    <a href="../players/<%= player.id %>">
+                                                                    <%= player.firstname %> <%= player.lastname %>                   
+                                                                    </a>
+                                                                </h3>
+                                                            </div>
+                                                            <div class="position">
+                                                                <%= player.position %> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <% end %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+           
+                    </main>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

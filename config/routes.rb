@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :news
   resources :clubs
-  resources :players, only: [:show]
+  resources :players, only: [:index, :show]
   resources :tournaments, only: [:show]
   resources :matches, only: [:show]
   
