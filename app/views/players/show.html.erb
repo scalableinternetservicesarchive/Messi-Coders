@@ -87,6 +87,7 @@
                                         </div>
 
                                         <div class = "matchdropdown">
+                                         <div>Select a game from the dropdown menu to view statistics:</div>
                                          <% matches = getFiles(@player.lastname) %>
                                          <%= select_tag(:matchToView, options_for_select(matches, selected: :matchToView ), {:class => 'selectdropdown'}) %>
 
@@ -106,12 +107,12 @@
                                         <div class="uk-width-9-10 uk-push-1-10">
                                             <div class="player-total-info">
                                                 <!--- Graphs/Stats Charts will be Placed Here--->
-                                                <p><strong>Shooting Statistics</p>
+                                                <!---p><strong>Shooting Statistics</p>
                                                 <p><strong>Passing Statistics</p>
                                                 <p><strong>Possession Statistics</p>
                                                 <p><strong>Player Defending Statistics</p>
                                                 <p><strong>Ball Defending Statistics</p>
-                                                <p><strong>Additional Statistics</p>
+                                                <p><strong>Additional Statistics</p--->
                                                 <!-- List Items Have ul>
                                                     <li>List Item?</li>
                                                 </ul--->
