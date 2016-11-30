@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+</head>
+
+<body class="tm-isblog tt-players-page" style="overflow-x: hidden">
+    <div class="over-wrap">
+        <div class="tm-top-a-box tm-full-width tm-box-bg-1 ">
+            <div class="uk-container uk-container-center">
+                <section id="tm-top-a" class="tm-top-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
+
+                    <div class="uk-width-1-1 uk-row-first">
+                        <div class="uk-panel">
+                            <div class="uk-cover-background uk-position-relative head-wrap" style="height: 290px; background-image: url('../../images/head-bg.jpg');">
+                                <img class="uk-invisible" src="../../images/head-bg.jpg" alt="" height="290" width="1920">
+                                <div class="uk-position-cover uk-flex uk-flex-center head-title">
+                                    <h1 class="myTeamName">INSERT TEAM NAMES</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="uk-container uk-container-center alt">
+            <ul class="uk-breadcrumb">
+                <li><a>Single Match Statistics</a>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-container uk-container-center alt">
+                 <div class>
+                    <h3 class="history-title">Match Statistics</h3>
+                        <table class="stat-table">
+                        <tbody>
+                            <% source = File.join('app', 'assets', 'csv', @match.gameid + '.csv') %>
+                            <% CSV.foreach(source, :headers => false) do |row| %>
+                            <tr>
+                                <% row.each do |col| %>
+                                <td><%=col%></td>
+                                <% end %>
+                            </tr>
+                            <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>

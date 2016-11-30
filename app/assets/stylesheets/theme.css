@@ -15313,9 +15313,9 @@ ul.uk-switcher {
   border: 1px solid #e7e7e7;
 }
 .stat-table tr td:first-child {
-  padding: 0 13px;
+  padding: 0px;
   color: #adadad;
-  text-align: right;
+  text-align: center;
 }
 .tabs-switch-top {
   padding: 0;
