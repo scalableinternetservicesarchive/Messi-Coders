@@ -85,11 +85,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <div class = "matchdropdown">    
-                                         <%= select_tag(:matchToView, options_for_select([['Select a Match', 1], ['CRS vs BOS', 2], ['CRS vs WNY', 3], ['CRS vs ORL', 4], ['CRS vs FCKC', 5]], selected: :matchToView ), {:class => 'selectdropdown'}) %> 
+
+                                        <div class = "matchdropdown">
+                                         <% matches = getFiles(@player.lastname) %>
+                                         <%= select_tag(:matchToView, options_for_select(matches, selected: :matchToView ), {:class => 'selectdropdown', :onchange => "update_data(this.value)"}) %>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="uk-container uk-container-center alt">
