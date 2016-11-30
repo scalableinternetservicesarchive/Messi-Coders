@@ -74,7 +74,11 @@
                                             </address>
                                         </div>
                                         <div class="va-view-wrap">
-                                            <a class="view-article" href="../matches/<%=match.id%>">view</a>
+                                            <% if match.gameid == "N/A" || match.gameid == "2016-international-friendly-usa-sui-102316" || match.gameid == "2016-international-friendly-usa-irl-0123116" %>
+                                                <a class="view-article">No Match Data</a>
+                                            <% else %>
+                                                <a class="view-article" href="../matches/<%=match.id%>">view</a>
+                                            <% end %>
                                         </div>
                                     </div>
                                 <% end %>

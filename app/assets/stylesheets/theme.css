@@ -1,14 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Economica';
 @import 'https://fonts.googleapis.com/css?family=Asap';
 @import 'https://fonts.googleapis.com/css?family=Play';
-/**
- * Torbara Sport.AK Template for Joomla, exclusively on Envato Market: http://themeforest.net/user/torbara?ref=torbara
- * @encoding     UTF-8
- * @version      1.0
- * @copyright    Copyright (C) 2015 Torbara (http://torbara.com). All rights reserved.
- * @license      GNU General Public License version 2 or later, see http://www.gnu.org/licenses/gpl-2.0.html
- * @author       Vadim Kozhukhov (support@torbara.com)
- */
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -15302,6 +15294,7 @@ ul.uk-switcher {
 }
 .stat-table {
   width: 100%;
+  margin-bottom: 10px;
 }
 .stat-table tr td {
   text-align: center;
