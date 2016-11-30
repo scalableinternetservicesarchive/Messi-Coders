@@ -46,13 +46,23 @@
                                             <img src="../../images/Emblems/<%=match.team1%>.png"></a>                    
                                         </div>
                                         <div class="team-name">
-                                            <%= match.team1 %>             
+                                            <% if Club.find_by name:match.team1 %>
+                                            <% team1 = Club.find_by name:match.team1 %>
+                                            <a href="../clubs/<%=team1.id%>" style="color: #ffffff;"><%= match.team1 %></a>
+                                            <% else %>
+                                            <%= match.team1 %>
+                                            <% end %>
                                         </div>
                                         <div class="team-score">
                                             <%= match.score %>
                                         </div>
                                         <div class="team-name">
+                                            <% if Club.find_by name:match.team2 %>
+                                            <% team2 = Club.find_by name:match.team2 %>
+                                            <a href="../clubs/<%=team2.id%>" style="color: #ffffff;"><%= match.team2 %></a>
+                                            <% else %>
                                             <%= match.team2 %>
+                                            <% end %>
                                         </div>
                                         <div class="logo">
                                             <a href="results.html">
