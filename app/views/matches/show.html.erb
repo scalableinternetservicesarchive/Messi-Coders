@@ -4,7 +4,7 @@
 <head>
 </head>
 
-<body class="tm-isblog tt-players-page" style="overflow-x: hidden">
+<body class="tm-isblog tt-players-page" style="overflow-x: scroll">
     <div class="over-wrap">
         <div class="tm-top-a-box tm-full-width tm-box-bg-1 ">
             <div class="uk-container uk-container-center">
@@ -15,7 +15,7 @@
                             <div class="uk-cover-background uk-position-relative head-wrap" style="height: 290px; background-image: url('../../images/head-bg.jpg');">
                                 <img class="uk-invisible" src="../../images/head-bg.jpg" alt="" height="290" width="1920">
                                 <div class="uk-position-cover uk-flex uk-flex-center head-title">
-                                    <h1 class="myTeamName">INSERT TEAM NAMES</h1>
+                                    <h1 class="myTeamName"><span><%=@match.team1%></span>   <%=@match.score%>   <%=@match.team2%></h1>
                                 </div>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                 </li>
             </ul>
         </div>
-        <div class="uk-container uk-container-center alt">
+        <div class="uk-container uk-container-center alt" style="overflow-x: scroll">
                  <div class>
                     <h3 class="history-title">Match Statistics</h3>
                         <table class="stat-table">
@@ -39,6 +39,9 @@
                             <% CSV.foreach(source, :headers => false) do |row| %>
                             <tr>
                                 <% row.each do |col| %>
+                                <% if col.match(/^0/) || col.match(/^1/) || col.match(/^2/) || col.match(/^3/) || col.match(/^4/) || col.match(/^5/) || col.match(/6/) || col.match(/^7/) || col.match(/^8/) || col.match(/^9/) %>
+                                    <% col = col[0, 5] %>
+                                <% end %>
                                 <td><%=col%></td>
                                 <% end %>
                             </tr>
