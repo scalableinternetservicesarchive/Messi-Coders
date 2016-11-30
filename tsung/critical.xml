@@ -57,7 +57,7 @@
   </options>
 
   <sessions>
-    <session name="stats-viewer" probability="100" type="ts_http">
+    <session name="stats-viewer" probability="40" type="ts_http">
 
       <!-- start out at the landing page. -->
       <request>
@@ -109,7 +109,7 @@
 
     </session>
 
-    <session name="search-viewer" probability="100" type="ts_http">
+    <session name="search-viewer" probability="30" type="ts_http">
 
       <!-- start out at the dashboard. -->
       <request>
@@ -136,7 +136,7 @@
       <thinktime value="4" random="true"></thinktime>
     </session>
 
-    <session name="news-session" probability="100" type="ts_http">
+    <session name="news-session" probability="30" type="ts_http">
 
       <!-- start out at the dashboard. -->
       <request>
