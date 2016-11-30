@@ -168,42 +168,6 @@
         <var name="random_news_title" />
       </setdynvars>
 
-      <!-- post to /news/new to create a new news article. TODO: Don't know how to write
-           remember the url of the created news so we can delete it later 
-      <request subst="true">
-        <dyn_variable name="created_news_url" re="[Ll]ocation: (http://.*)\r"/>
-        <dyn_variable name="created_news_id" re="[Ll]ocation: http://.*/news/(.*)\r"/>
-        <http
-          url='/news'
-          version='1.1'
-          method='POST'
-          contents='news%5Bname%5D=community_name_%%_random_news_title%%&amp;commit=Create+News'>
-        </http>
-      </request>
-
-      visit the news page.  
-      <request>
-        <http url='/news' version='1.1' method='GET'></http>
-      </request>
-
-      wait for up to 5 seconds, user is reading the news and decides to delete news 
-      <thinktime value="5" random="true"></thinktime>
-
-       delete the news we just created 
-      <request subst="true">
-        <http url="%%_created_news_url%%" method="DELETE">
-        </http>
-      </request>
-
-       Uncomment the following to debug print your dynamic variables  
-      
-      <setdynvars sourcetype="eval" code="fun( {Pid, DynVars} ) ->
-        io:format([126, $p, 126, $n, 126, $n], [DynVars]),
-        ok end.">
-        <var name="dump" />
-      </setdynvars>
-      -->
-
     </session>
 
   </sessions>
