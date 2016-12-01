@@ -5,7 +5,8 @@ $ rails server
 ```
 *Web applicaiton hosted on localhost:3000
 
-
+Kyle Matter:
+![alt text](https://scontent-lax3-1.xx.fbcdn.net/v/t35.0-12/15271537_10207021548371313_895765531_o.gif?oh=a073cfdbd1e79d642c6b8f832401aecf&oe=58427248 "Kyle?")
 
 Niels Pineda: 
 ![alt text](https://scontent-lax3-1.xx.fbcdn.net/t31.0-8/10644776_10202387681607540_6634311447920062950_o.jpg "Niels Pineda")
