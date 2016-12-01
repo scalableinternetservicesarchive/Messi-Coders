@@ -85,6 +85,9 @@
       <!-- wait for up to 10 seconds, user is filling out news creation form -->
       <thinktime value="10" random="true"></thinktime>
 
+      
+
+      
       <!-- User submits news creation form to create a new news article -->
       <request subst="true">
         <dyn_variable name="created_news_url" re="[Ll]ocation: (http://.*)\r"/>
@@ -92,17 +95,19 @@
         <http url='/news' version='1.1' method='POST' contents='news%5Bnewslink%5D=wef&amp;news%5Btitle%5D=awef&amp;news%5Bsubtext%5D=awef&amp;news%5Bimglink%5D=awef&amp;commit=Create+News'></http>
       </request>
 
-      
 
-      
 
-      <!-- Uncomment the following to debug print your dynamic variables  --> 
+
+            <!-- Uncomment the following to debug print your dynamic variables  --> 
       
       <setdynvars sourcetype="eval" code="fun( {Pid, DynVars} ) ->
         io:format([126, $p, 126, $n, 126, $n], [DynVars]),
         ok end.">
         <var name="dump" />
       </setdynvars>
+      
+
+
       
 
     </session>
