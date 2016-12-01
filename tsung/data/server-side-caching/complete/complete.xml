@@ -5,7 +5,7 @@
   </clients>
 
   <servers>
-    <server host="35.165.100.214" port="80" type="tcp"/>
+    <server host="35.164.216.79" port="80" type="tcp"/>
   </servers>
 
 

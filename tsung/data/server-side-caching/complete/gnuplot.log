@@ -215,6 +215,26 @@ Warning: empty y range [0:0], adjusting to [-1:1]
 
 	title is " max_sample", offset at ((character units) 0, 0, 0)
 
+Warning: empty y range [3156.22:3156.22], adjusting to [3124.66:3187.78]
+
+	title is " min_sample", offset at ((character units) 0, 0, 0)
+
+Could not find/open font when opening font "arial", using internal non-scalable font
+
+	title is " rate", offset at ((character units) 0, 0, 0)
+
+Warning: empty y range [0.1:0.1], adjusting to [0.099:0.101]
+
+	title is " mean", offset at ((character units) 0, 0, 0)
+
+
+	title is " stddev", offset at ((character units) 0, 0, 0)
+
+Warning: empty y range [0:0], adjusting to [-1:1]
+
+	title is " max_sample", offset at ((character units) 0, 0, 0)
+
+Warning: empty y range [3156.22:3156.22], adjusting to [3124.66:3187.78]
 
 	title is " min_sample", offset at ((character units) 0, 0, 0)
 
@@ -236,6 +256,7 @@ Warning: empty y range [0:0], adjusting to [-1:1]
 
 	title is " min_sample", offset at ((character units) 0, 0, 0)
 
+Warning: empty y range [0:0], adjusting to [-1:1]
 Could not find/open font when opening font "arial", using internal non-scalable font
 
 	title is " rate", offset at ((character units) 0, 0, 0)
@@ -251,29 +272,10 @@ Warning: empty y range [0:0], adjusting to [-1:1]
 
 	title is " max_sample", offset at ((character units) 0, 0, 0)
 
-Warning: empty y range [0.269531:0.269531], adjusting to [0.266836:0.272227]
 
 	title is " min_sample", offset at ((character units) 0, 0, 0)
-
-Could not find/open font when opening font "arial", using internal non-scalable font
-
-	title is " rate", offset at ((character units) 0, 0, 0)
-
-Warning: empty y range [0.1:0.1], adjusting to [0.099:0.101]
-
-	title is " mean", offset at ((character units) 0, 0, 0)
-
-
-	title is " stddev", offset at ((character units) 0, 0, 0)
 
 Warning: empty y range [0:0], adjusting to [-1:1]
-
-	title is " max_sample", offset at ((character units) 0, 0, 0)
-
-Warning: empty y range [0.269531:0.269531], adjusting to [0.266836:0.272227]
-
-	title is " min_sample", offset at ((character units) 0, 0, 0)
-
 Could not find/open font when opening font "arial", using internal non-scalable font
 
 	title is " rate", offset at ((character units) 0, 0, 0)
