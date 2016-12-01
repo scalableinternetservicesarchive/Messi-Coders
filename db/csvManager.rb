@@ -1,12 +1,32 @@
 require 'csv'
+require 'thread'
+
+
+def findPlayerInFiles(player)
+    $files = Array.new
+    $csv_list = Dir.glob("csv/*")
+    threads = (1..3).map do |i|
+      Thread.new(i) do |i|
+        if i == 1
+            $files.push(*getFiles(player, $csv_list[0..30]))
+        elsif i == 2
+            $files.push(*getFiles(player, $csv_list[31..60]))
+        else
+            $files.push(*getFiles(player, $csv_list[61..93]))
+        end
+      end
+    end
+    threads.each {|t| t.join}
+    return $files
+end
 
 # @method getFiles - Returns csv files the player is found inside
 # @param player - Name of player to search for
 # @return Array{files} - List of csv files player is found inside
-def getFiles(player)
+def getFiles(player, csv_list)
     # Gets List of CSV to seed database with
     files = Array.new
-    csv_list = Dir.glob("csv/*")
+    # csv_list = Dir.glob("csv/*")
     csv_list.each do |csv_filename|
         csv_text = File.read(csv_filename)
         csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -91,3 +111,46 @@ end
 # data = getData('Colaprico', file)
 # organizedData = splitData(data, 10)
 # puts organizedData
+r1 = findPlayerInFiles('FARQUHARSON')
+# findPlayerInFiles('Colaprico')
+# findPlayerInFiles('Colaprico')
+# findPlayerInFiles('Colaprico')
+# findPlayerInFiles('Colaprico')
+# findPlayerInFiles('Colaprico')
+# findPlayerInFiles('Colaprico')
+# findPlayerInFiles('Colaprico')
+# findPlayerInFiles('Colaprico')
+# findPlayerInFiles('Colaprico')
+
+def getFiles(player)
+    # Gets List of CSV to seed database with
+    files = Array.new
+    csv_list = Dir.glob("csv/*")
+    csv_list.each do |csv_filename|
+        csv_text = File.read(csv_filename)
+        csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+        csv.each do |row|
+            csv_player = row.to_hash['Player']
+            if csv_player && csv_player.downcase == player.downcase
+                files.push(csv_filename)
+                break
+            end
+        end
+    end
+    # puts files
+end
+
+r2 = getFiles('FARQUHARSON')
+# getFiles('Colaprico')
+# getFiles('Colaprico')
+# getFiles('Colaprico')
+# getFiles('Colaprico')
+# getFiles('Colaprico')
+# getFiles('Colaprico')
+# getFiles('Colaprico')
+# getFiles('Colaprico')
+# getFiles('Colaprico')
+
+puts r1
+puts '============='
+puts r2
