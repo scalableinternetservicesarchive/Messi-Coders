@@ -181,7 +181,7 @@
 
       <!-- Edit the news we just created -->
       <request>
-        <http url='/news/%%_created_news_id%%' version='1.1' method='PATCH' contents="news=%5Bnewslink%5D=newlink&amp;
+        <http url='/news/%%_created_news_id%%' version='1.1' method='PATCH' contents="utf8=%E2%9C%93&amp;news=%5Bnewslink%5D=newlink&amp;
                                                                 news%5Btitle%5D=NewTitle&amp;
                                                                 news%5Bsubtext%5D=Why&amp;
                                                                 news%5Bimglink%5D=Newimagelink&amp;
