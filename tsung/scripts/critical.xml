@@ -9,7 +9,7 @@
 
   <!-- Server side setup -->
   <servers>
-    <server host="35.164.186.144" port="80" type="tcp"></server>
+    <server host="35.164.234.80" port="80" type="tcp"></server>
   </servers>
 
 
@@ -17,10 +17,10 @@
     <arrivalphase phase="1" duration="30" unit="second">
       <users arrivalrate="1" unit="second"></users>
     </arrivalphase>
-    <arrivalphase phase="2" duration="30" unit="second">
+    <!--<arrivalphase phase="2" duration="30" unit="second">
       <users arrivalrate="2" unit="second"></users>
     </arrivalphase>
-    <!--<arrivalphase phase="3" duration="30" unit="second">
+    <arrivalphase phase="3" duration="30" unit="second">
       <users arrivalrate="4" unit="second"></users>
     </arrivalphase>
    <arrivalphase phase="4" duration="30" unit="second">
@@ -57,7 +57,7 @@
   </options>
 
   <sessions>
-
+ 
 
     <session name="news-session" probability="100" type="ts_http">
 
@@ -109,6 +109,15 @@
       <request>
         <http url='/news/%%_created_news_id%%' version='1.1' method='DELETE'></http>
       </request>
+
+      <!-- Uncomment the following to debug print your dynamic variables  --> 
+      
+      <setdynvars sourcetype="eval" code="fun( {Pid, DynVars} ) ->
+        io:format([126, $p, 126, $n, 126, $n], [DynVars]),
+        ok end.">
+        <var name="dump" />
+      </setdynvars>
+      
 
     </session>
 
