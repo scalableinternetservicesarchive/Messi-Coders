@@ -40,6 +40,10 @@ class NewsController < ApplicationController
         @news.destroy
         redirect_to news_index_path
     end
+    
+    def cache_key_for_news_row(news)
+        "news-#{news.id}"
+    end
 
     private
     def news_params
