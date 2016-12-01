@@ -73,42 +73,44 @@
                                 </div>
                                 <div class="uk-container uk-container-center alt">
                                     <div class="uk-grid grid1 players-list" style="height: 400px">
-                                        <% @club.players.each do |player| %>
-                                            <% cache(cache_key_for_player_row(player)) do %>
-                                                <div class="uk-width-large-1-4 uk-width-medium-1-2 uk-width-small-1-2 player-item <%=player.position%>_filter">
-                                                    <div class="player-article">
-                                                        <div class="wrapper">
-                                                            <div class="img-wrap">
-                                                                <div class="player-number">
-                                                                    <span>
-                                                                    <%= player.number %>               
-                                                                    </span>
-                                                                </div>
-                                                                <div class="bio">
-                                                                    <span>
-                                                                    <%= link_to 'Bio', player_path(player) %>
-                                                                    </a>
-                                                                    </span>
-                                                                </div>
-                                                                <a href="../players/<%= player.id %>">
-                                                                <img src="../../images/PlayerPics/<%=player.pid%>.jpg" class="img-polaroid" alt="" title="">
-                                                                </a>
-                                                            </div>
-                                                            <div class="info">
-                                                                <div class="name">
-                                                                    <h3>
-                                                                        <a href="../players/<%= player.id %>">
-                                                                        <%= player.firstname %> <%= player.lastname %>                   
+                                        <% cache(cache_key_for_players_table) do %>
+                                            <% @club.players.each do |player| %>
+                                                <% cache(cache_key_for_player_row(player)) do %>
+                                                    <div class="uk-width-large-1-4 uk-width-medium-1-2 uk-width-small-1-2 player-item <%=player.position%>_filter">
+                                                        <div class="player-article">
+                                                            <div class="wrapper">
+                                                                <div class="img-wrap">
+                                                                    <div class="player-number">
+                                                                        <span>
+                                                                        <%= player.number %>               
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="bio">
+                                                                        <span>
+                                                                        <%= link_to 'Bio', player_path(player) %>
                                                                         </a>
-                                                                    </h3>
+                                                                        </span>
+                                                                    </div>
+                                                                    <a href="../players/<%= player.id %>">
+                                                                    <img src="../../images/PlayerPics/<%=player.pid%>.jpg" class="img-polaroid" alt="" title="">
+                                                                    </a>
                                                                 </div>
-                                                                <div class="position">
-                                                                    <%= player.position %> 
+                                                                <div class="info">
+                                                                    <div class="name">
+                                                                        <h3>
+                                                                            <a href="../players/<%= player.id %>">
+                                                                            <%= player.firstname %> <%= player.lastname %>                   
+                                                                            </a>
+                                                                        </h3>
+                                                                    </div>
+                                                                    <div class="position">
+                                                                        <%= player.position %> 
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                <% end %>
                                             <% end %>
                                         <% end %>
                                     </div>

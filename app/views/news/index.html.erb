@@ -48,37 +48,40 @@
                     <div class="contentpaneopen">
                        <main id="tm-content" class="tm-content">
                             <div class="uk-grid" data-uk-grid-match="">
-                                <% @news.reverse_each do |news| %>
-                                    <% cache(cache_key_for_news_row(news)) do %>
-                                        <div class="uk-width-large-1-3 uk-width-medium-2-4 uk-width-small-2-4 list-article uk-flex uk-flex-column">
-                                            <div class="wrapper">
-                                                <div class="img-wrap uk-flex-wrap-top">
-                                                    <a target="_blank" href=<%= news.newslink %>>
-                                                    <img src=<%= news.imglink %> alt="">
-                                                    </a>        
+                                <% cache(cache_key_for_news_table) do %>
+                                    <% @news.reverse_each do |news| %>
+                                        <% cache(cache_key_for_news_row(news)) do %>
+                                            <div class="uk-width-large-1-3 uk-width-medium-2-4 uk-width-small-2-4 list-article uk-flex uk-flex-column">
+                                                <div class="wrapper">
+                                                    <div class="img-wrap uk-flex-wrap-top">
+                                                        <a target="_blank" href=<%= news.newslink %>>
+                                                        <img src=<%= news.imglink %> alt="">
+                                                        </a>        
+                                                    </div>
+                                                    <div class="info uk-flex-wrap-middle">
+                                                        <div class="date">
+                                                            <%= news.created_at.strftime("%d %b. %Y") %>            
+                                                        </div>
+                                                        <div class="name">
+                                                            <h4>
+                                                                <a target="_blank" href=<%= news.newslink %>>
+                                                                <%= news.title %>                    </a>        
+                                                            </h4>
+                                                        </div>
+                                                        <div class="text">
+                                                            <p><%= news.subtext %></p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="info uk-flex-wrap-middle">
-                                                    <div class="date">
-                                                        <%= news.created_at.strftime("%d %b. %Y") %>            
-                                                    </div>
-                                                    <div class="name">
-                                                        <h4>
-                                                            <a target="_blank" href=<%= news.newslink %>>
-                                                            <%= news.title %>                    </a>        
-                                                        </h4>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p><%= news.subtext %></p>
-                                                    </div>
+                                                <div class="article-actions uk-flex-wrap-bottom">
+                                                    <div class="count"><span><%= link_to 'Edit', edit_news_path(news), {:style=>'color:#00afd8;', :class => "css_class"} %></span></div>
+                                                    <div class="read-more"><a target="_blank" href=<%= news.newslink %>>Read More</a></div>
                                                 </div>
                                             </div>
-                                            <div class="article-actions uk-flex-wrap-bottom">
-                                                <div class="count"><span><%= link_to 'Edit', edit_news_path(news), {:style=>'color:#00afd8;', :class => "css_class"} %></span></div>
-                                                <div class="read-more"><a target="_blank" href=<%= news.newslink %>>Read More</a></div>
-                                            </div>
-                                        </div>
+                                        <% end %>
                                     <% end %>
                                 <% end %>
+                            </div>
                         </main>
                     </div>
                 </div>

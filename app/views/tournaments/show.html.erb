@@ -35,53 +35,55 @@
                 <div class="tm-main uk-width-large-1-1">
                     <main id="tm-content" class="tm-content">
                         <div class="match-list-wrap" id="target">
-                            <% @tournament.matches.each do |match| %>
-                                <% cache(cache_key_for_match_row(match)) do %>
-                                    <% if !match.date.match(/^Week/) && match.date != "Season" && match.date != "ALL" %> 
-                                        <div class="match-list-item" id="target">
-                                            <div class="date">
-                                                <span><%= match.date %></span>
+                            <% cache(cache_key_for_matches_table) do %>
+                                <% @tournament.matches.each do |match| %>
+                                    <% cache(cache_key_for_match_row(match)) do %>
+                                        <% if !match.date.match(/^Week/) && match.date != "Season" && match.date != "ALL" %> 
+                                            <div class="match-list-item" id="target">
+                                                <div class="date">
+                                                    <span><%= match.date %></span>
+                                                </div>
+                                                <div class="logo">
+                                                    <a href="results.html">
+                                                    <img src="../../images/Emblems/<%=match.team1%>.png"></a>                    
+                                                </div>
+                                                <div class="team-name">
+                                                    <% if Club.find_by name:match.team1 %>
+                                                    <% team1 = Club.find_by name:match.team1 %>
+                                                    <a href="../clubs/<%=team1.id%>" style="color: #ffffff;"><%= match.team1 %></a>
+                                                    <% else %>
+                                                    <%= match.team1 %>
+                                                    <% end %>
+                                                </div>
+                                                <div class="team-score">
+                                                    <%= match.score %>
+                                                </div>
+                                                <div class="team-name">
+                                                    <% if Club.find_by name:match.team2 %>
+                                                    <% team2 = Club.find_by name:match.team2 %>
+                                                    <a href="../clubs/<%=team2.id%>" style="color: #ffffff;"><%= match.team2 %></a>
+                                                    <% else %>
+                                                    <%= match.team2 %>
+                                                    <% end %>
+                                                </div>
+                                                <div class="logo">
+                                                    <a href="results.html">
+                                                    <img src="../../images/Emblems/<%=match.team2%>.png"></a>                  
+                                                </div>
+                                                <div class="location">
+                                                    <address>
+                                                        <%= match.city %> , <%= match.state %>               <br><br>
+                                                    </address>
+                                                </div>
+                                                <div class="va-view-wrap">
+                                                    <% if match.gameid == "N/A" || match.gameid == "2016-international-friendly-usa-sui-102316" || match.gameid == "2016-international-friendly-usa-irl-0123116" %>
+                                                        <a class="view-article">No Match Data</a>
+                                                    <% else %>
+                                                        <a class="view-article" href="../matches/<%=match.id%>">view</a>
+                                                    <% end %>
+                                                </div>
                                             </div>
-                                            <div class="logo">
-                                                <a href="results.html">
-                                                <img src="../../images/Emblems/<%=match.team1%>.png"></a>                    
-                                            </div>
-                                            <div class="team-name">
-                                                <% if Club.find_by name:match.team1 %>
-                                                <% team1 = Club.find_by name:match.team1 %>
-                                                <a href="../clubs/<%=team1.id%>" style="color: #ffffff;"><%= match.team1 %></a>
-                                                <% else %>
-                                                <%= match.team1 %>
-                                                <% end %>
-                                            </div>
-                                            <div class="team-score">
-                                                <%= match.score %>
-                                            </div>
-                                            <div class="team-name">
-                                                <% if Club.find_by name:match.team2 %>
-                                                <% team2 = Club.find_by name:match.team2 %>
-                                                <a href="../clubs/<%=team2.id%>" style="color: #ffffff;"><%= match.team2 %></a>
-                                                <% else %>
-                                                <%= match.team2 %>
-                                                <% end %>
-                                            </div>
-                                            <div class="logo">
-                                                <a href="results.html">
-                                                <img src="../../images/Emblems/<%=match.team2%>.png"></a>                  
-                                            </div>
-                                            <div class="location">
-                                                <address>
-                                                    <%= match.city %> , <%= match.state %>               <br><br>
-                                                </address>
-                                            </div>
-                                            <div class="va-view-wrap">
-                                                <% if match.gameid == "N/A" || match.gameid == "2016-international-friendly-usa-sui-102316" || match.gameid == "2016-international-friendly-usa-irl-0123116" %>
-                                                    <a class="view-article">No Match Data</a>
-                                                <% else %>
-                                                    <a class="view-article" href="../matches/<%=match.id%>">view</a>
-                                                <% end %>
-                                            </div>
-                                        </div>
+                                        <% end %>
                                     <% end %>
                                 <% end %>
                             <% end %>

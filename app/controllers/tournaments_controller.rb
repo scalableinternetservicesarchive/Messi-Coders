@@ -7,9 +7,5 @@ class TournamentsController < ApplicationController
         #     end
         # end
     end
-    
-    def cache_key_for_match_row(match)
-       "match-#{match.id}"
-    end
-    helper_method :cache_key_for_match_row
+
 end
