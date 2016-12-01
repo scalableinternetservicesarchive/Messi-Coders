@@ -8,11 +8,11 @@ class NewsController < ApplicationController
 
     def show
         @news = News.find(params[:id])
-        if stale?(@news)
-            respond_to do |format|
-                format.html
-            end
-        end
+        # if stale?(@news)
+        #     respond_to do |format|
+        #         format.html
+        #     end
+        # end
     end
 
     def new
