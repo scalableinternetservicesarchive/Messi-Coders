@@ -11,6 +11,9 @@ Club.delete_all
 Tournament.delete_all
 Player.delete_all
 Match.delete_all
+News.delete_all
+
+News.create(title: 'Cool Article', subtext: 'Something pretty cool', imglink: 'http://3.bp.blogspot.com/-2Ld87eLS2gs/U88FzxUhHtI/AAAAAAAABak/5Qasi3uz2QQ/s1600/christen.png', newslink: 'google.com')
 
 
 Club.create(name: 'Boston Breakers')
