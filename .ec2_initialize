@@ -1,8 +1,2 @@
 sudo yum install -y patch
 sudo yum install -y sqlite-devel
-
-bundle install
-bundle update
-
-rails db:migrate
-rails db:seed
