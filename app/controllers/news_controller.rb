@@ -26,13 +26,13 @@ class NewsController < ApplicationController
     def create
         @news = News.new(news_params)
         @news.save
-        redirect_to action: "index"
+        redirect_to @news
     end
 
     def update
         @news = News.find(params[:id])
         @news.update(news_params)
-        redirect_to action: "index"
+        redirect_to @news
     end
 
     def destroy

@@ -9,7 +9,7 @@
 
   <!-- Server side setup -->
   <servers>
-    <server host="35.164.186.144" port="80" type="tcp"></server>
+    <server host="35.164.234.80" port="80" type="tcp"></server>
   </servers>
 
 
@@ -17,7 +17,7 @@
     <arrivalphase phase="1" duration="30" unit="second">
       <users arrivalrate="1" unit="second"></users>
     </arrivalphase>
-    <arrivalphase phase="2" duration="30" unit="second">
+    <!--<arrivalphase phase="2" duration="30" unit="second">
       <users arrivalrate="2" unit="second"></users>
     </arrivalphase>
     <arrivalphase phase="3" duration="30" unit="second">
@@ -32,7 +32,7 @@
    <arrivalphase phase="6" duration="30" unit="second">
      <users arrivalrate="32" unit="second"></users>
    </arrivalphase>
-   <!--<arrivalphase phase="7" duration="30" unit="second">
+   <arrivalphase phase="7" duration="30" unit="second">
      <users arrivalrate="64" unit="second"></users>
    </arrivalphase>
    <arrivalphase phase="8" duration="30" unit="second">
@@ -57,86 +57,9 @@
   </options>
 
   <sessions>
-    <session name="stats-viewer" probability="40" type="ts_http">
+ 
 
-      <!-- start out at the landing page. -->
-      <request>
-        <http url='/' version='1.1' method='GET'></http>
-      </request>
-
-      <!-- wait for up to 2 seconds, user is looking at pictures -->
-      <thinktime value="2" random="true"></thinktime>
-
-      <!-- visit the Tournaments page, as a user would do.  -->
-      <request>
-        <http url='/tournaments/2' version='1.1' method='GET'></http>
-      </request>
-
-      <!-- wait for up to 2 seconds, user is looking through matches -->
-      <thinktime value="2" random="true"></thinktime>
-
-      <!-- User clicks through to get to a match.  -->
-      <request>
-        <http url='/matches/42' version='1.1' method='GET'></http>
-      </request>
-
-      <!-- wait for up to 5 seconds, user is looking at match data -->
-      <thinktime value="5" random="true"></thinktime>
-
-      <!-- visit the Tournaments page, as a user would do.  -->
-      <request>
-        <http url='/tournaments/3' version='1.1' method='GET'></http>
-      </request>
-
-      <!-- wait for up to 2 seconds, user is looking through matches -->
-      <thinktime value="2" random="true"></thinktime>
-
-      <!-- User clicks through to get to a club.  -->
-      <request>
-        <http url='/clubs/1' version='1.1' method='GET'></http>
-      </request>
-
-      <!-- wait for up to 5 seconds, user is looking at club profiles -->
-      <thinktime value="5" random="true"></thinktime>
-
-      <!-- User clicks through to get to a club.  -->
-      <request>
-        <http url='/players/1' version='1.1' method='GET'></http>
-      </request>
-
-      <!-- wait for up to 5 seconds, user is looking at player profile -->
-      <thinktime value="5" random="true"></thinktime>
-
-    </session>
-
-    <session name="search-viewer" probability="30" type="ts_http">
-
-      <!-- start out at the dashboard. -->
-      <request>
-        <http url='/' version='1.1' method='GET'></http>
-      </request>
-
-      <!-- wait for up to 2 seconds, user is looking at posts -->
-      <thinktime value="2" random="true"></thinktime>
-
-      <!-- User searches for player named "Julie"  -->
-      <request>
-        <http url='/players?utf8=%E2%9C%93&amp;search=Julie&amp;commit=Search' version='1.1' method='GET'></http>
-      </request>
-
-      <!-- wait for up to 2 seconds, user is looking at results -->
-      <thinktime value="2" random="true"></thinktime>
-
-      <!-- User clicks on one of the players -->
-      <request>
-        <http url='/players/5' version='1.1' method='GET'></http>
-      </request>
-
-      <!-- wait for up to 4 seconds, user is looking at player -->
-      <thinktime value="4" random="true"></thinktime>
-    </session>
-
-    <session name="news-session" probability="30" type="ts_http">
+    <session name="news-session" probability="100" type="ts_http">
 
       <!-- start out at the dashboard. -->
       <request>
@@ -163,29 +86,38 @@
       <thinktime value="10" random="true"></thinktime>
 
       <!-- User submits news creation form to create a new news article -->
-      <request>
+      <request subst="true">
         <dyn_variable name="created_news_id" re="[Ll]ocation: http://.*/news/(.*)\r"/>
-        <http url='/news' version='1.1' method='POST' contents="utf8=%E2%9C%93&amp;news=%5Bnewslink%5D=newlink&amp;news%5Btitle%5D=Title&amp;news%5Bsubtext%5D=Why&amp;news%5Bimglink%5D=imagelink&amp;commit=Create+New"></http>
+        <http url='/news' version='1.1' method='POST' contents="news=%5Bnewslink%5D=newlink&amp;news%5Btitle%5D=Title&amp;news%5Bsubtext%5D=Why&amp;news%5Bimglink%5D=imagelink&amp;commit=Create+News"></http>
       </request>
 
       <!-- View the edit page for the news we just created -->
-      <request>
+      <request subst="true">
         <http url='/news/%%_created_news_id%%/edit' version='1.1' method='GET'></http>
       </request>
 
       <thinktime value="5" random="true"></thinktime>
 
       <!-- Edit the news we just created -->
-      <request>
-        <http url='/news/%%_created_news_id%%' version='1.1' method='PATCH' contents="utf8=%E2%9C%93&amp;news=%5Bnewslink%5D=newlink&amp;news%5Btitle%5D=NewTitle&amp;news%5Bsubtext%5D=Why&amp;news%5Bimglink%5D=Newimagelink&amp;commit=Update+New"></http>
+      <request subst="true">
+        <http url='/news/%%_created_news_id%%' version='1.1' method='PATCH' contents="news=%5Bnewslink%5D=newlink&amp;news%5Btitle%5D=NewTitle&amp;news%5Bsubtext%5D=Why&amp;news%5Bimglink%5D=Newimagelink&amp;commit=Update+News"></http>
       </request>
 
       <thinktime value="2" random="true"></thinktime>
 
       <!-- Delete news we just created -->
-      <request>
+      <request subst="true">
         <http url='/news/%%_created_news_id%%' version='1.1' method='DELETE'></http>
       </request>
+
+      <!-- Uncomment the following to debug print your dynamic variables  --> 
+      
+      <setdynvars sourcetype="eval" code="fun( {Pid, DynVars} ) ->
+        io:format([126, $p, 126, $n, 126, $n], [DynVars]),
+        ok end.">
+        <var name="dump" />
+      </setdynvars>
+      
 
     </session>
 
