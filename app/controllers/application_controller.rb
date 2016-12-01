@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  #protect_from_forgery with: :exception
   require 'csv'
 
     # @method getFiles - Returns csv files the player is found inside
