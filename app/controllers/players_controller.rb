@@ -11,10 +11,10 @@ class PlayersController < ApplicationController
 
     def show
         @player = Player.find(params[:id])
-        if stale?(@player)
-            respond_to do |format|
-                format.html
-            end
-        end
+        # if stale?(@player)
+        #     respond_to do |format|
+        #         format.html
+        #     end
+        # end
     end
 end
