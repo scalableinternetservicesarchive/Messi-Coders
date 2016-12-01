@@ -9,7 +9,7 @@
 
   <!-- Server side setup -->
   <servers>
-    <server host="35.164.234.80" port="80" type="tcp"></server>
+    <server host="35.160.253.247" port="80" type="tcp"></server>
   </servers>
 
 
@@ -59,17 +59,121 @@
   <sessions>
  
 
-    <session name="news-session" probability="100" type="ts_http">
+    <session name="complete-test" probability="100" type="ts_http">
 
-      <!-- start out at the dashboard. -->
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
+      <!-- User visits the homepage -->
+
+      <!-- start out at the homepage -->
       <request>
         <http url='/' version='1.1' method='GET'></http>
       </request>
 
-      <!-- wait for up to 2 seconds, user is looking at pictures -->
+      <!-- wait for up to 2 seconds, user is looking at pictures and options -->
+      <thinktime value="2" random="true"></thinktime>
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
+
+
+
+
+
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
+      <!-- Define random numbers -->
+
+      <!-- Define a dynamic tournament number -->
+      <setdynvars sourcetype="random_number" start="1" end="5">
+        <var name="random_tournament_number" />
+      </setdynvars>
+
+      <!-- Define a dynamic match number -->
+      <setdynvars sourcetype="random_number" start="42" end="89">
+        <var name="random_match_number" />
+      </setdynvars>
+
+      <!-- Define a dynamic club number -->
+      <setdynvars sourcetype="random_number" start="1" end="10">
+        <var name="random_club_number" />
+      </setdynvars>
+
+      <!-- Define a dynamic player number -->
+      <setdynvars sourcetype="random_number" start="1" end="200">
+        <var name="random_player_number" />
+      </setdynvars>
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
+
+
+
+
+
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
+      <!-- User visits tournaments matches clubs and players -->
+
+      <!-- User vists tournament page -->
+      <request subst="true">
+        <http url='/tournaments/%%_random_tournament_number%%' version='1.1' method='GET'></http>
+      </request>
+
+      <!-- Wait for user to view tournament -->
       <thinktime value="2" random="true"></thinktime>
 
-      <!-- visit the news page, as a user would do.  -->
+      <!-- User vists match page -->
+      <request subst="true">
+        <http url='/matches/%%_random_match_number%%' version='1.1' method='GET'></http>
+      </request>
+
+      <!-- Wait for user to view match -->
+      <thinktime value="2" random="true"></thinktime>
+
+      <!-- User vists club page -->
+      <request subst="true">
+        <http url='/clubs/%%_random_club_number%%' version='1.1' method='GET'></http>
+      </request>
+
+      <!-- Wait for user to view club-->
+      <thinktime value="2" random="true"></thinktime>
+
+      <!-- User vists player page -->
+      <request subst="true">
+        <http url='/players/%%_random_player_number%%' version='1.1' method='GET'></http>
+      </request>
+
+      <!-- Wait for user to view player-->
+      <thinktime value="2" random="true"></thinktime>
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
+
+
+
+
+
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
+      <!-- User searches for player -->
+
+      <!-- User searches for player named "Julie"  -->
+      <request>
+        <http url='/players?utf8=%E2%9C%93&amp;search=Julie&amp;commit=Search' version='1.1' method='GET'></http>
+      </request>
+
+      <!-- Wait for user to view results-->
+      <thinktime value="2" random="true"></thinktime>
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
+
+
+
+
+
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
+      <!-- User visits News Section -->
+
+      <!-- User visits news page  -->
       <request>
         <http url='/news' version='1.1' method='GET'></http>
       </request>
@@ -77,16 +181,13 @@
       <!-- wait for up to 2 seconds, user is viewing news-->
       <thinktime value="2" random="true"></thinktime>
 
-      <!-- visit the news creation page.  -->
+      <!-- User vists news creation page  -->
       <request>
         <http url='/news/new' version='1.1' method='GET'></http>
       </request>
 
       <!-- wait for up to 10 seconds, user is filling out news creation form -->
       <thinktime value="10" random="true"></thinktime>
-
-      
-
       
       <!-- User submits news creation form to create a new news article -->
       <request subst="true">
@@ -95,20 +196,40 @@
         <http url='/news' version='1.1' method='POST' contents='news%5Bnewslink%5D=wef&amp;news%5Btitle%5D=awef&amp;news%5Bsubtext%5D=awef&amp;news%5Bimglink%5D=awef&amp;commit=Create+News'></http>
       </request>
 
+      <!-- User visits edit page for newly created article -->
+      <request subst="true">
+        <http url='/news/%%_created_news_id%%/edit' version='1.1' method='GET'></http>
+      </request>
+
+      <!-- Wait for user to fill in edit form -->
+      <thinktime value="2" random="true"></thinktime>
+
+      <!-- User edits newly created article -->
+      <request subst="true">
+        <http url='/news/%%_created_news_id%%' version='1.1' method='PATCH' contents="news%5Bnewslink%5D=newlink&amp;news%5Btitle%5D=NewTitle&amp;news%5Bsubtext%5D=Why&amp;news%5Bimglink%5D=Newimagelink&amp;commit=Update+News"></http>
+      </request>
+
+      <!-- Wait for user to view news -->
+      <thinktime value="2" random="true"></thinktime>
+
+      <!-- User deletes newly created article -->
+      <request subst="true">
+        <http url='/news/%%_created_news_id%%' version='1.1' method='DELETE'></http>
+      </request>
+      <!-------------------------------------------------------->
+      <!-------------------------------------------------------->
 
 
 
-            <!-- Uncomment the following to debug print your dynamic variables  --> 
+
+
+      <!-- Debug dynamic variables  --> 
       
       <setdynvars sourcetype="eval" code="fun( {Pid, DynVars} ) ->
         io:format([126, $p, 126, $n, 126, $n], [DynVars]),
         ok end.">
         <var name="dump" />
       </setdynvars>
-      
-
-
-      
 
     </session>
 

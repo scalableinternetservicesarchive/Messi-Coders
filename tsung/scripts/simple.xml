@@ -9,7 +9,7 @@
 
   <!-- Server side setup -->
   <servers>
-    <server host="35.164.234.80" port="80" type="tcp"></server>
+    <server host="35.160.253.247" port="80" type="tcp"></server>
   </servers>
 
 
