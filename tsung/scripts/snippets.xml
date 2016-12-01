@@ -76,3 +76,28 @@
       <!-- wait for up to 4 seconds, user is looking at player -->
       <thinktime value="4" random="true"></thinktime>
     </session>
+
+
+
+
+
+
+
+    <!-- View the edit page for the news we just created -->
+      <request subst="true">
+        <http url='/news/%%_created_news_id%%/edit' version='1.1' method='GET'></http>
+      </request>
+
+      <thinktime value="5" random="true"></thinktime>
+
+      <!-- Edit the news we just created -->
+      <request subst="true">
+        <http url='/news/%%_created_news_id%%' version='1.1' method='PATCH' contents="news=%5Bnewslink%5D=newlink&amp;news%5Btitle%5D=NewTitle&amp;news%5Bsubtext%5D=Why&amp;news%5Bimglink%5D=Newimagelink&amp;commit=Update+News"></http>
+      </request>
+
+      <thinktime value="2" random="true"></thinktime>
+
+      <!-- Delete news we just created -->
+      <request subst="true">
+        <http url='/news/%%_created_news_id%%' version='1.1' method='DELETE'></http>
+      </request>
