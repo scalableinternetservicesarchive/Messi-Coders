@@ -88,24 +88,19 @@
       
 
       
-      <request>
-                <dyn_variable name='authenticity_token'></dyn_variable>
-                <http url='/news' version='1.1' method='GET'></http>
-            </request>
-
-            <setdynvars sourcetype="eval"
-                        code='fun({Pid,DynVars})->
-                                {ok,Val}=ts_dynvars:lookup(authenticity_token,DynVars),
-                                re:replace(Val,"[+]","%2B",[global, {return,list}]) end.'>
-                <var name="authenticity_token" />
-            </setdynvars> 
-
-            <request subst="true">
+      <!-- User submits news creation form to create a new news article -->
+      <request subst="true">
+        <dyn_variable name="created_news_url" re="[Ll]ocation: (http://.*)\r"/>
         <dyn_variable name="created_news_id" re="[Ll]ocation: http://.*/news/(.*)\r"/>
-                <http url='/news' method='POST' version='1.1' contents="utf8=%E2%9C%93&amp;authenticity_token=%%_authenticity_token%%&amp;news%5Bnewslink%5D=wef&amp;news%5Btitle%5D=awef&amp;news%5Bsubtext%5D=awef&amp;news%5Bimglink%5D=awef&amp;commit=Create+News" content_type="application/x-www-form-urlencoded"> </http>
-            </request>
+        <http url='/news' version='1.1' method='POST' contents='news%5Bnewslink%5D=wef&amp;news%5Btitle%5D=awef&amp;news%5Bsubtext%5D=awef&amp;news%5Bimglink%5D=awef&amp;commit=Create+News'></http>
+      </request>
 
-                  <setdynvars sourcetype="eval" code="fun( {Pid, DynVars} ) ->
+
+
+
+            <!-- Uncomment the following to debug print your dynamic variables  --> 
+      
+      <setdynvars sourcetype="eval" code="fun( {Pid, DynVars} ) ->
         io:format([126, $p, 126, $n, 126, $n], [DynVars]),
         ok end.">
         <var name="dump" />
