@@ -8,8 +8,13 @@ class PlayersController < ApplicationController
             @players = Player.all
         end
     end
-    
+
     def show
         @player = Player.find(params[:id])
+        if stale?(@player)
+            respond_to do |format|
+                format.html
+            end
+        end
     end
 end
