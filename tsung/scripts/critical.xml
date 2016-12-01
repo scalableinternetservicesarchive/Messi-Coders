@@ -101,6 +101,7 @@
             </setdynvars> 
 
             <request subst="true">
+        <dyn_variable name="created_news_id" re="[Ll]ocation: http://.*/news/(.*)\r"/>
                 <http url='/news' method='POST' version='1.1' contents="utf8=%E2%9C%93&amp;authenticity_token=%%_authenticity_token%%&amp;news%5Bnewslink%5D=wef&amp;news%5Btitle%5D=awef&amp;news%5Bsubtext%5D=awef&amp;news%5Bimglink%5D=awef&amp;commit=Create+News" content_type="application/x-www-form-urlencoded"> </http>
             </request>
 
