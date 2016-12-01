@@ -7,7 +7,8 @@ $ rails server
 
 Who's that coder?:
 ![alt text](https://scontent-lax3-1.xx.fbcdn.net/v/t35.0-12/15271537_10207021548371313_895765531_o.gif?oh=a073cfdbd1e79d642c6b8f832401aecf&oe=58427248 "Kyle?")
-#It's Kyle!!!
+
+![alt text](https://scontent-lax3-1.xx.fbcdn.net/v/t34.0-12/15320402_10207022365671745_1935180066_n.gif?oh=f1cb7acc658bdb15aaa7afafc4c968af&oe=58428BDF)
 
 Niels Pineda: 
 ![alt text](https://scontent-lax3-1.xx.fbcdn.net/t31.0-8/10644776_10202387681607540_6634311447920062950_o.jpg "Niels")
