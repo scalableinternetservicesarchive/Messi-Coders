@@ -12,7 +12,7 @@
 
                     <div class="uk-width-1-1 uk-row-first">
                         <div class="uk-panel">
-                            <!---TO-DO: Potentially change this background-image---> 
+                            <!---TO-DO: Potentially change this background-image--->
                             <div class="uk-cover-background uk-position-relative head-wrap" style="height: 290px; background-image: url('../../images/head-bg.jpg');">
                                 <img class="uk-invisible" src="../../images/head-bg.jpg" alt="" height="290" width="1920">
                                 <div class="uk-position-cover uk-flex uk-flex-center head-title">
@@ -29,7 +29,7 @@
             <ul class="uk-breadcrumb">
                 <li><a>NWSL</a>
                 </li>
-                <li><a href="../clubs/<%= @player.club_id %>"><%= @player.clubname %></a> 
+                <li><a href="../clubs/<%= @player.club_id %>"><%= @player.clubname %></a>
                 </li>
                 <li  class="uk-active"><span class="myPlayerName"><%= @player.firstname %> <%= @player.lastname %></span>
                 </li>
@@ -53,19 +53,19 @@
                                         <div class="uk-grid">
                                             <div class="uk-width-2-10">
                                                 <div class="avatar">
-                                                    <img style= "width:100%" src="../../images/PlayerPics/<%=@player.pid%>.jpg">                    
+                                                    <img style= "width:100%" src="../../images/PlayerPics/<%=@player.pid%>.jpg">
                                                 </div>
                                             </div>
                                             <div class="uk-width-1-12">
                                                 <!--- Have to trace back these classes in html to change them--->
                                                 <div class="number">
-                                                    <%= @player.number %>                   
+                                                    <%= @player.number %>
                                                 </div>
                                             </div>
                                             <div class="uk-width-6-12">
                                                 <div class="name">
                                                     <h2>
-                                                        <span class="myPlayerName"><%= @player.firstname %> <%= @player.lastname %></span>                     
+                                                        <span class="myPlayerName"><%= @player.firstname %> <%= @player.lastname %></span>
                                                     </h2>
                                                 </div>
                                                 <div class="wrap">
@@ -87,9 +87,9 @@
                                         </div>
 
                                         <div class = "matchdropdown">
-                                         <div>Select a game from the dropdown menu to view statistics:</div>
-                                         <% matches = getFiles(@player.lastname) %>
-                                         <%= select_tag(:matchToView, options_for_select(matches, selected: :matchToView ), {:class => 'selectdropdown'}) %>
+                                         <!-- <div>Select a game from the dropdown menu to view statistics:</div> -->
+                                         <!-- <% matches = getFiles(@player.lastname) %> -->
+                                         <!-- <%= select_tag(:matchToView, options_for_select(matches, selected: :matchToView ), {:class => 'selectdropdown'}) %> -->
 
                                         </div>
 
@@ -102,27 +102,41 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="uk-container uk-container-center alt">
-                                    <div class="uk-grid">
+                                <div class="uk-container uk-container-center alt" style="overflow-x: scroll">
+                                    <div>
                                         <div class="uk-width-9-10 uk-push-1-10">
                                             <div class="player-total-info">
                                                 <!--- Graphs/Stats Charts will be Placed Here--->
-                                                <!---p><strong>Shooting Statistics</p>
-                                                <p><strong>Passing Statistics</p>
-                                                <p><strong>Possession Statistics</p>
-                                                <p><strong>Player Defending Statistics</p>
-                                                <p><strong>Ball Defending Statistics</p>
-                                                <p><strong>Additional Statistics</p--->
-                                                <!-- List Items Have ul>
-                                                    <li>List Item?</li>
-                                                </ul--->
+                                                <h3 class="history-title">Statistics</h3>
+                                                    <% getFiles(@player.lastname).each do |match| %>
+                                                       <% data = getData(@player.lastname, match) %>
+                                                       <h4> <%= match.sub!(".csv", "").sub!("app/assets/csv/","").tr('-',' ').upcase %> </h4>
+                                                       <table class="stat-table">
+                                                       <tbody>
+                                                        <tr>
+                                                           <% data.each do |key, value| %>
+                                                                <% if key != 'Player' %>
+                                                                    <td><%=key%></td>
+                                                                <% end %>
+                                                           <%end%>
+                                                        </tr>
+                                                        <tr>
+                                                           <% data.each do |key, value| %>
+                                                               <% if key != 'Player' %>
+                                                                   <td><%=value = value[0,5]%></td>
+                                                                <% end %>
+                                                           <%end%>
+                                                        </tr>
+                                                       </tbody>
+                                                       </table>
+                                                    <% end %>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </article>
     </div>
-  <!---  
+  <!---
     <script language="javascript">
         function fillElement(elementName, newText) {
             var elements  = document.getElementsByClassName(elementName);
@@ -130,8 +144,8 @@
                 elements[i].innerHTML = newText;
             }
         }
-        
-        window.onload = function(e){ 
+
+        window.onload = function(e){
             fillElement("myPlayerName", "Make this page dynamic");
         }
     </script>
