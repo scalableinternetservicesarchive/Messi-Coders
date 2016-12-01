@@ -86,7 +86,7 @@
       <thinktime value="10" random="true"></thinktime>
 
       <!-- User submits news creation form to create a new news article -->
-      <request>
+      <request subst="true">
         <dyn_variable name="created_news_id" re="[Ll]ocation: http://.*/news/(.*)\r"/>
         <http url='/news' version='1.1' method='POST' contents="utf8=%E2%9C%93&amp;news=%5Bnewslink%5D=newlink&amp;news%5Btitle%5D=Title&amp;news%5Bsubtext%5D=Why&amp;news%5Bimglink%5D=imagelink&amp;commit=Create+News"></http>
       </request>
