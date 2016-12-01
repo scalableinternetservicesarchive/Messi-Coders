@@ -7,6 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
+Club.delete_all
+Tournament.delete_all
+Player.delete_all
+Match.delete_all
+
+
 Club.create(name: 'Boston Breakers')
 Club.create(name: 'Chicago Red Stars')
 Club.create(name: 'Houston Dash')
