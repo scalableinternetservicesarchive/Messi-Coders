@@ -31,7 +31,7 @@
    </arrivalphase>
    <arrivalphase phase="6" duration="30" unit="second">
      <users arrivalrate="32" unit="second"></users>
-   </arrivalphase>
+   <!--</arrivalphase>
    <arrivalphase phase="7" duration="30" unit="second">
      <users arrivalrate="64" unit="second"></users>
    </arrivalphase>
@@ -43,7 +43,7 @@
    </arrivalphase>
    <arrivalphase phase="10" duration="30" unit="second">
      <users arrivalrate="512" unit="second"></users>
-   </arrivalphase>
+   </arrivalphase>-->
 
   </load>
 
